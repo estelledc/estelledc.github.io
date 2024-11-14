@@ -1,10 +1,11 @@
-.clearfix::after, article .highlight figcaption::after {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
-
-.code-block, article .highlight, article pre {
+.code-block,
+article pre,
+article .highlight {
   background: #2d2d2d;
   margin: 2ex 0;
   padding: 1rem 1em;
@@ -14,27 +15,30 @@
   border-radius: 2px;
   overflow: auto;
   color: #cccccc;
-  font-size: 16px;
-  line-height: 1.6em;
+  font-size: 0.85em;
+  line-height: 1.45;
 }
-
-.line-numbers, article .gist-not-used .gist-file .gist-data .line-numbers, article .gist-not-used .gist-file .gist-data .highlight .gutter pre, article .highlight .gutter .gist-not-used .gist-file .gist-data pre, article .highlight .gutter pre {
+.line-numbers,
+article .highlight .gutter pre,
+article .gist-not-used .gist-file .gist-data .line-numbers {
   color: #666;
-  font-size: 16px;
+  font-size: 0.85em;
 }
-
-article pre, article code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+article pre,
+article code {
+  font-family: Monaco, "Source Code Pro", Consolas, Menlo, Consolas, monospace;
 }
 article code {
   background: white;
-  text-shadow: 0 1px #fff;
   padding: 0 0.3rem;
 }
 article pre code {
   background: none;
   text-shadow: none;
   padding: 0;
+}
+article .highlight .marked {
+  background: #515151;
 }
 article .highlight pre {
   border: none;
@@ -80,14 +84,14 @@ article .gist-not-used {
 }
 article .gist-not-used .gist-file {
   border: none;
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: Monaco, "Source Code Pro", Consolas, Menlo, Consolas, monospace;
   margin: 0;
 }
 article .gist-not-used .gist-file .gist-data {
   background: none;
   border: none;
 }
-article .gist-not-used .gist-file .gist-data .line-numbers, article .gist-not-used .gist-file .gist-data .highlight .gutter pre, article .highlight .gutter .gist-not-used .gist-file .gist-data pre {
+article .gist-not-used .gist-file .gist-data .line-numbers {
   background: none;
   border: none;
   padding: 0 20px 0 0;
@@ -103,7 +107,7 @@ article .gist-not-used .gist-file .highlight {
 article .gist-not-used .gist-file .gist-meta {
   background: #2d2d2d;
   color: #999999;
-  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 0.85em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -116,10 +120,6 @@ article .gist-not-used .gist-file a {
 article .gist-not-used .gist-file a:hover {
   text-decoration: underline;
 }
-article iframe {
-  border: 1px solid #CCC;
-}
-
 pre .comment,
 pre .title {
   color: #999999;
