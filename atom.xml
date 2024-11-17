@@ -6,7 +6,7 @@
   <link href="https://estelledc.github.io/atom.xml" rel="self"/>
   
   <link href="https://estelledc.github.io/"/>
-  <updated>2024-11-15T10:53:20.728Z</updated>
+  <updated>2024-11-17T01:12:35.887Z</updated>
   <id>https://estelledc.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>claimRSS</title>
+    <link href="https://estelledc.github.io/2024/11/17/claimRSS/"/>
+    <id>https://estelledc.github.io/2024/11/17/claimRSS/</id>
+    <published>2024-11-17T01:12:23.000Z</published>
+    <updated>2024-11-17T01:12:35.887Z</updated>
+    
+    <content type="html"><![CDATA[<p>This message is used to verify that this feed (feedId:80778812612148224) belongs to me (userId:69372057953172480). Join me in enjoying the next generation information browser <a href="https://follow.is/">https://follow.is</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This message is used to verify that this feed (feedId:80778812612148224) belongs to me (userId:69372057953172480). Join me in enjoying th</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>the 1 day for JS</title>
