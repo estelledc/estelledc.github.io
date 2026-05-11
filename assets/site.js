@@ -9,7 +9,7 @@ const labels = [
   "Learnings",
   "Wiki",
   "Feedback",
-  "LightRead",
+  "全智评",
   "Frontend",
   "LangGraph",
   "Canvas",
