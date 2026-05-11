@@ -12,234 +12,164 @@
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
-    <canvas id="knowledge-canvas" aria-hidden="true"></canvas>
-
     <header class="site-header">
       <a class="brand" href="/" aria-label="回到首页">
         <span class="brand-mark">X</span>
-        <span>
-          <strong>Jason Xun</strong>
-          <small>AI Native Builder</small>
-        </span>
+        <span>Jason Xun</span>
       </a>
       <nav class="site-nav" aria-label="主导航">
         <a href="#work">项目</a>
         <a href="#system">系统</a>
         <a href="#knowledge">知识</a>
-        <a href="/archive-2024/">旧博客</a>
+        <a href="/archive-2024/">归档</a>
       </nav>
     </header>
 
+    <nav class="sub-nav" aria-label="页面导航">
+      <a class="sub-nav-title" href="/">AI Native Builder</a>
+      <div>
+        <a href="#work">Work</a>
+        <a href="/about/">About</a>
+        <a class="pill pill-small" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">全智评</a>
+      </div>
+    </nav>
+
     <main>
-      <section class="hero" id="top">
-        <div class="hero-copy">
+      <section class="tile hero-tile tile-light" id="top" aria-labelledby="hero-title">
+        <div class="tile-copy">
           <p class="eyebrow">AI Native 全栈实习生</p>
-          <h1>把真实工程问题，沉淀成可复用系统。</h1>
-          <p class="hero-lede">
+          <h1 id="hero-title">把真实工程问题，做成可交付系统。</h1>
+          <p class="lead">
             我用 AI 作为工作操作系统，从产品理解、方案拆解、代码实现、真机验证到复盘归档，持续把一次性交付变成下一次能直接复用的能力。
           </p>
-          <div class="hero-actions" aria-label="主要操作">
-            <a class="button primary" href="#work">看代表项目</a>
-            <a class="button secondary" href="#knowledge">看知识地图</a>
+          <div class="actions" aria-label="主要操作">
+            <a class="pill" href="#work">看代表项目</a>
+            <a class="pill pill-secondary" href="#knowledge">看知识系统</a>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="能力快照">
-          <div class="signal-row">
-            <span>已上线 AI 评价系统</span>
-            <strong>全智评</strong>
-          </div>
-          <div class="signal-row">
-            <span>Agent E2E 验证</span>
-            <strong>11 / 11</strong>
-          </div>
-          <div class="signal-row">
-            <span>AI 辅助开发效率</span>
-            <strong>3x+</strong>
-          </div>
-          <div class="signal-row">
-            <span>知识库结构</span>
-            <strong>Daily / Problems / Learnings / Wiki</strong>
-          </div>
-        </aside>
+        <figure class="product-shot hero-shot">
+          <img
+            src="/assets/media/quanzhiping-login.png"
+            alt="全智评实操视频 AI 智能评价系统登录界面截图"
+            width="1440"
+            height="1100"
+            loading="eager"
+          />
+          <figcaption>全智评上线版本 · AI 实操视频智能评价系统</figcaption>
+        </figure>
       </section>
 
-      <section class="section intro" aria-labelledby="intro-title">
-        <div>
-          <p class="section-kicker">What I Actually Do</p>
-          <h2 id="intro-title">不是“会用 AI”，而是用 AI 把事情做出来。</h2>
+      <section class="tile tile-dark feature-tile" id="work" aria-labelledby="work-title">
+        <div class="tile-copy">
+          <p class="eyebrow">Selected Work</p>
+          <h2 id="work-title">全智评</h2>
+          <p class="lead">
+            面向物理、化学、生物实验和职业技能考核的实操视频智能评价系统。教师创建评价项目与课堂码，学生上传实操视频，后端用 ASR、关键帧提取、Qwen 多模态评分和 Celery 编排生成评价明细。
+          </p>
+          <div class="actions">
+            <a class="pill" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">打开线上产品</a>
+            <a class="text-link on-dark" href="#system">查看工作系统</a>
+          </div>
         </div>
-        <p>
-          我关注的不是单次提示词效果，而是怎样设计一套稳定流程：哪些判断必须由人做，哪些执行可以交给模型，怎样用测试、验收、复盘和知识库把概率性输出变成可交付结果。
-        </p>
+
+        <div class="feature-spec" aria-label="全智评能力摘要">
+          <div>
+            <span>Frontend</span>
+            <strong>React · Vite · TypeScript · Ant Design</strong>
+          </div>
+          <div>
+            <span>Backend</span>
+            <strong>FastAPI · PostgreSQL · Redis · Celery</strong>
+          </div>
+          <div>
+            <span>AI Pipeline</span>
+            <strong>ASR · Key Frames · Qwen Vision</strong>
+          </div>
+          <div>
+            <span>Deploy</span>
+            <strong>OSS · Docker Compose · nginx</strong>
+          </div>
+        </div>
       </section>
 
-      <section class="section" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="section-kicker">Selected Work</p>
-          <h2 id="work-title">代表项目</h2>
+      <section class="tile tile-parchment" aria-labelledby="portfolio-title">
+        <div class="section-header">
+          <p class="eyebrow">Portfolio</p>
+          <h2 id="portfolio-title">项目不是列表，是能力的证据。</h2>
         </div>
 
-        <div class="work-grid">
-          <article class="work-card featured">
-            <div class="work-meta">
-              <span>AI Evaluation</span>
-              <span>已上线</span>
-            </div>
-            <h3>全智评</h3>
-            <p>
-              面向物理、化学、生物实验和职业技能考核的实操视频智能评价系统。教师创建评价项目与课堂码，学生上传实操视频，后端用 ASR、关键帧提取、Qwen 多模态评分和 Celery 编排生成评价明细。
-            </p>
-            <ul class="compact-list">
-              <li>把教师端、学生端和 AI 评价流水线拆成可部署的全栈系统。</li>
-              <li>使用 React、FastAPI、PostgreSQL、Redis、Celery、OSS、Docker 和 nginx 组织交付链路。</li>
-              <li><a href="https://www.quanzhiping.com/" target="_blank" rel="noopener">quanzhiping.com</a></li>
-            </ul>
-          </article>
-
-          <article class="work-card">
-            <div class="work-meta">
-              <span>iOS</span>
-              <span>AI Coding</span>
-            </div>
+        <div class="utility-grid">
+          <article class="utility-card">
+            <span>iOS · AI Coding</span>
             <h3>Thyself</h3>
-            <p>
-              个性化内容推荐产品，每天生成 8 篇长文。用 Claude Code 的 Plan-then-Execute 工作流推进架构规划、实现和测试，提升开发速度与一致性。
-            </p>
-            <ul class="compact-list">
-              <li>标准化 System Prompt 模板，减少 AI 生成代码的结构漂移。</li>
-              <li>重构并发逻辑，核心页面首屏指标下降 20%。</li>
-            </ul>
+            <p>个性化内容推荐产品，每天生成 8 篇长文。用 Plan-then-Execute 工作流推进架构规划、实现和测试。</p>
           </article>
-
-          <article class="work-card">
-            <div class="work-meta">
-              <span>visionOS</span>
-              <span>全国二等奖</span>
-            </div>
+          <article class="utility-card">
+            <span>visionOS · 全国二等奖</span>
             <h3>触见千年</h3>
-            <p>
-              visionOS 文物体验项目，从立项、架构规划到交互优化都引入 AI 辅助。重点不是“生成代码”，而是把复杂体验拆成可执行任务并持续验收。
-            </p>
-            <ul class="compact-list">
-              <li>核心交互响应从 2 秒优化到 0.8 秒。</li>
-              <li>用 Cursor 辅助架构规划、任务拆解和实现迭代。</li>
-            </ul>
+            <p>文物体验项目，从立项、架构规划到交互优化都引入 AI 辅助，核心交互响应从 2 秒优化到 0.8 秒。</p>
           </article>
-
-          <article class="work-card">
-            <div class="work-meta">
-              <span>Frontend</span>
-              <span>H5</span>
-            </div>
-            <h3>移动端 H5 海报分享</h3>
-            <p>
-              企业内部业务环境中的海报生成与分享链路。涉及 React、Canvas、WebGL 截图、Three.js renderer、Zustand ref、App 内外降级和真机验证。
-            </p>
-            <ul class="compact-list">
-              <li>识别 viewport 合成陷阱，用真机截图推翻错误推算。</li>
-              <li>把临时修复、回退决策和后续重设计边界写成工程复盘。</li>
-            </ul>
+          <article class="utility-card">
+            <span>Frontend · H5</span>
+            <h3>移动端海报分享</h3>
+            <p>React、Canvas、WebGL、Three.js renderer、Zustand ref、App 内外降级和真机验证。</p>
           </article>
-
-          <article class="work-card">
-            <div class="work-meta">
-              <span>Agent Workflow</span>
-              <span>LangGraph</span>
-            </div>
+          <article class="utility-card">
+            <span>Agent Workflow · LangGraph</span>
             <h3>AI 活动规划 Agent</h3>
-            <p>
-              从自造 Agent 调度迁移到 LangGraph，比较状态持久化、interrupt、人类确认、Saga 补偿和工具调用边界。E2E 场景验证达到 11 / 11。
-            </p>
-            <ul class="compact-list">
-              <li>用约束求解器接管硬规则，让 LLM 专注理解和表达。</li>
-              <li>补齐 Saga 反向补偿，避免外部副作用半成功。</li>
-            </ul>
+            <p>从自造调度迁移到 LangGraph，补齐 checkpoint、interrupt、Saga 补偿和 11 / 11 E2E 验证。</p>
           </article>
         </div>
       </section>
 
-      <section class="section split" id="system" aria-labelledby="system-title">
-        <div>
-          <p class="section-kicker">Operating System</p>
-          <h2 id="system-title">我的工作系统</h2>
-          <p>
+      <section class="tile tile-light system-tile" id="system" aria-labelledby="system-title">
+        <div class="tile-copy">
+          <p class="eyebrow">Operating System</p>
+          <h2 id="system-title">我的工作系统。</h2>
+          <p class="lead">
             我把学习和交付拆成一条闭环链路：每天记录事实，问题单独复盘，学到的模式写成笔记，跨页面关系进入 Wiki，行动项通过反馈文档追踪。
           </p>
         </div>
-        <div class="system-steps">
-          <div class="system-step">
-            <span>01</span>
-            <strong>Daily</strong>
-            <p>每天记录做了什么、卡在哪里、学到了什么。</p>
-          </div>
-          <div class="system-step">
-            <span>02</span>
-            <strong>Problems</strong>
-            <p>非平凡问题单独写根因、排查路径和复用经验。</p>
-          </div>
-          <div class="system-step">
-            <span>03</span>
-            <strong>Learnings</strong>
-            <p>把知识点写成以后能直接复用的操作手册。</p>
-          </div>
-          <div class="system-step">
-            <span>04</span>
-            <strong>Wiki</strong>
-            <p>维护知识地图、当前进度、矛盾和缺口。</p>
-          </div>
-          <div class="system-step">
-            <span>05</span>
-            <strong>Feedback</strong>
-            <p>把外部反馈拆成可执行、可检查的行动项。</p>
-          </div>
+        <div class="process-list">
+          <div><span>01</span><strong>Daily</strong><p>记录事实、阻塞和当天学到的东西。</p></div>
+          <div><span>02</span><strong>Problems</strong><p>把非平凡问题写清根因、排查路径和复用经验。</p></div>
+          <div><span>03</span><strong>Learnings</strong><p>把知识点沉淀成以后能直接复用的操作手册。</p></div>
+          <div><span>04</span><strong>Wiki</strong><p>维护知识地图、当前进度、矛盾和缺口。</p></div>
+          <div><span>05</span><strong>Feedback</strong><p>把外部反馈拆成可执行、可检查的行动项。</p></div>
         </div>
       </section>
 
-      <section class="section" id="knowledge" aria-labelledby="knowledge-title">
-        <div class="section-heading">
-          <p class="section-kicker">Knowledge Map</p>
-          <h2 id="knowledge-title">知识地图</h2>
+      <section class="tile tile-dark-2" id="knowledge" aria-labelledby="knowledge-title">
+        <div class="section-header section-header-dark">
+          <p class="eyebrow">Knowledge Map</p>
+          <h2 id="knowledge-title">四个正在变厚的能力面。</h2>
         </div>
-        <div class="knowledge-grid">
-          <a class="knowledge-item" href="#work">
-            <strong>AI Native</strong>
-            <span>AI Coding 工作流、概率管理、角色边界消融。</span>
-          </a>
-          <a class="knowledge-item" href="#work">
-            <strong>Frontend</strong>
-            <span>React、Zustand、Router、Canvas/WebGL、H5 App 内外降级。</span>
-          </a>
-          <a class="knowledge-item" href="#work">
-            <strong>Agent / LangGraph</strong>
-            <span>Checkpoint、interrupt、Send API、Saga、长期记忆和上下文。</span>
-          </a>
-          <a class="knowledge-item" href="#system">
-            <strong>Engineering Practice</strong>
-            <span>干净提交、调试纪律、测试 harness、真机验证和复盘。</span>
-          </a>
+        <div class="knowledge-row">
+          <a href="#work"><strong>AI Native</strong><span>AI Coding 工作流、概率管理、角色边界消融。</span></a>
+          <a href="#work"><strong>Frontend</strong><span>React、Zustand、Router、Canvas/WebGL、H5 降级。</span></a>
+          <a href="#work"><strong>Agent</strong><span>LangGraph、checkpoint、interrupt、Saga、上下文管理。</span></a>
+          <a href="#system"><strong>Engineering</strong><span>调试纪律、真机验证、测试 harness、复盘系统。</span></a>
         </div>
       </section>
 
-      <section class="section archive-strip" aria-labelledby="archive-title">
+      <section class="tile tile-parchment archive-cta" aria-labelledby="archive-title">
         <div>
-          <p class="section-kicker">Archive</p>
-          <h2 id="archive-title">旧博客保留为归档</h2>
+          <p class="eyebrow">Archive</p>
+          <h2 id="archive-title">旧博客保留为归档。</h2>
           <p>
             2024 年的 Hexo 博客原路径继续保留。新的首页展示当前阶段，旧文章作为学习起点留档。
           </p>
         </div>
-        <a class="button secondary" href="/archive-2024/">打开旧博客归档</a>
+        <a class="pill pill-secondary" href="/archive-2024/">打开旧博客归档</a>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>Jason Xun</span>
-      <span>AI Native Builder</span>
       <a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.quanzhiping.com/" target="_blank" rel="noopener">全智评</a>
+      <a href="/archive-2024/">Archive</a>
     </footer>
-
-    <script src="/assets/site.js"></script>
   </body>
 </html>
