@@ -12,10 +12,7 @@
     <header class="site-header">
       <a class="brand" href="/" aria-label="回到首页">
         <span class="brand-mark">X</span>
-        <span>
-          <strong>Jason Xun</strong>
-          <small>Archive</small>
-        </span>
+        <span>Jason Xun</span>
       </a>
       <nav class="site-nav" aria-label="主导航">
         <a href="/">首页</a>
@@ -24,34 +21,36 @@
       </nav>
     </header>
 
+    <nav class="sub-nav" aria-label="页面导航">
+      <a class="sub-nav-title" href="/archive-2024/">Archive 2024</a>
+      <div>
+        <a href="/">Home</a>
+        <a class="pill pill-small" href="/about/">About</a>
+      </div>
+    </nav>
+
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Archive 2024</p>
-          <h1>旧博客归档</h1>
-          <p class="hero-lede">
+      <section class="tile tile-light archive-page">
+        <div class="tile-copy">
+          <p class="eyebrow">Archive</p>
+          <h1>旧博客归档。</h1>
+          <p class="lead">
             这里保留 2024 年 Hexo 博客的学习记录。旧文章原路径继续可访问，新的首页展示当前阶段的个人 IP 和项目资产。
           </p>
         </div>
-        <aside class="hero-panel" aria-label="旧博客文章列表">
-          <div class="signal-row">
-            <span>2024-11-15</span>
-            <strong><a href="/2024/11/15/the-1-day-for-JS/">the 1 day for JS</a></strong>
-          </div>
-          <div class="signal-row">
-            <span>2024-11-14</span>
-            <strong><a href="/2024/11/14/JS-node-js-study-plan/">JS & node.js study plan</a></strong>
-          </div>
-          <div class="signal-row">
-            <span>2024-11-14</span>
-            <strong><a href="/2024/11/14/end%20before%20and%20begin%20now/">end before and begin now</a></strong>
-          </div>
-          <div class="signal-row">
-            <span>2024-11-14</span>
-            <strong><a href="/2024/11/14/hello-world/">Hello World</a></strong>
-          </div>
-        </aside>
+        <div class="archive-list" aria-label="旧博客文章列表">
+          <a href="/2024/11/15/the-1-day-for-JS/"><span>2024-11-15</span><strong>the 1 day for JS</strong></a>
+          <a href="/2024/11/14/JS-node-js-study-plan/"><span>2024-11-14</span><strong>JS & node.js study plan</strong></a>
+          <a href="/2024/11/14/end%20before%20and%20begin%20now/"><span>2024-11-14</span><strong>end before and begin now</strong></a>
+          <a href="/2024/11/14/hello-world/"><span>2024-11-14</span><strong>Hello World</strong></a>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <span>Jason Xun</span>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+    </footer>
   </body>
 </html>
