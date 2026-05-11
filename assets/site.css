@@ -18,6 +18,7 @@
   --wide: 1440px;
   --nav-height: 44px;
   --subnav-height: 52px;
+  --subnav-offset: 52px;
   --product-shadow: rgba(0, 0, 0, 0.22) 3px 5px 30px 0;
 }
 
@@ -146,6 +147,7 @@ a:focus-visible,
   place-items: center;
   min-height: calc(100vh - var(--nav-height) - var(--subnav-height));
   padding: 80px 22px;
+  scroll-margin-top: calc(var(--nav-height) + var(--subnav-offset));
 }
 
 .tile-light {
@@ -193,7 +195,8 @@ a:focus-visible,
 }
 
 .tile-dark .eyebrow,
-.tile-dark-2 .eyebrow {
+.tile-dark-2 .eyebrow,
+.tile-dark-3 .eyebrow {
   color: var(--dark-muted);
 }
 
@@ -231,7 +234,8 @@ h3 {
 }
 
 .tile-dark .lead,
-.tile-dark-2 .lead {
+.tile-dark-2 .lead,
+.tile-dark-3 .lead {
   color: var(--dark-muted);
 }
 
@@ -415,6 +419,52 @@ h3 {
 .utility-card p {
   margin: 18px 0 0;
   color: #333333;
+}
+
+.thyself-tile {
+  grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1.08fr);
+  gap: 64px;
+  padding-left: max(22px, calc((100vw - var(--wide)) / 2 + 72px));
+  padding-right: max(22px, calc((100vw - var(--wide)) / 2 + 72px));
+}
+
+.thyself-copy {
+  width: 100%;
+}
+
+.thyself-copy .lead {
+  margin-left: 0;
+}
+
+.thyself-copy .actions {
+  justify-content: flex-start;
+}
+
+.web-showcase {
+  width: 100%;
+}
+
+.web-showcase img {
+  max-height: 560px;
+  border: 1px solid var(--hairline);
+  object-fit: cover;
+  object-position: center top;
+}
+
+.case-points.light-points {
+  border-top-color: var(--hairline);
+}
+
+.case-points.light-points div {
+  border-bottom-color: var(--hairline);
+}
+
+.case-points.light-points dt {
+  color: var(--muted);
+}
+
+.case-points.light-points dd {
+  color: var(--ink);
 }
 
 .heritage-tile {
@@ -601,6 +651,7 @@ h3 {
   }
 
   .feature-tile,
+  .thyself-tile,
   .heritage-tile,
   .system-tile,
   .subpage-hero {
@@ -624,6 +675,7 @@ h3 {
 @media (max-width: 640px) {
   :root {
     --subnav-height: auto;
+    --subnav-offset: 123px;
   }
 
   .site-header {
@@ -654,6 +706,7 @@ h3 {
 
   .tile,
   .feature-tile,
+  .thyself-tile,
   .heritage-tile,
   .system-tile,
   .subpage-hero {

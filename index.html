@@ -28,6 +28,7 @@
       <a class="sub-nav-title" href="/">AI Native Builder</a>
       <div>
         <a href="#work">Work</a>
+        <a href="#thyself">Thyself</a>
         <a href="/about/">About</a>
         <a class="pill pill-small" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">全智评</a>
       </div>
@@ -100,9 +101,9 @@
 
         <div class="utility-grid">
           <article class="utility-card">
-            <span>iOS · AI Coding</span>
-            <h3>Thyself</h3>
-            <p>个性化内容推荐产品，每天生成 8 篇长文。用 Plan-then-Execute 工作流推进架构规划、实现和测试。</p>
+            <span>AI Product · Longform</span>
+            <h3><a href="#thyself">Thyself</a></h3>
+            <p>有限的长文推荐系统。每天 8 篇、推荐理由可解释，用 Persona、质量门和事件反馈管理长期阅读兴趣。</p>
           </article>
           <article class="utility-card">
             <span>visionOS · 全国二等奖</span>
@@ -120,6 +121,45 @@
             <p>从自造调度迁移到 LangGraph，补齐 checkpoint、interrupt、Saga 补偿和 11 / 11 E2E 验证。</p>
           </article>
         </div>
+      </section>
+
+      <section class="tile tile-light thyself-tile" id="thyself" aria-labelledby="thyself-title">
+        <div class="thyself-copy">
+          <p class="eyebrow">Daily Curation System</p>
+          <h2 id="thyself-title">Thyself</h2>
+          <p class="lead">
+            一个有限、可解释的长文推荐产品：每天只给用户 8 篇文章，不做无限流；每条推荐都要说明为什么适合这个人，并把阅读、反思和标签沉淀进个人兴趣画像。
+          </p>
+          <div class="actions">
+            <a class="pill" href="https://www.thyself.cc/" target="_blank" rel="noopener">打开线上产品</a>
+            <a class="text-link" href="#system">查看工作系统</a>
+          </div>
+          <dl class="case-points light-points" aria-label="Thyself 项目要点">
+            <div>
+              <dt>产品约束</dt>
+              <dd>8 篇 / 天 · 不刷新 · 不无限滚动 · 推荐理由必须可读。</dd>
+            </div>
+            <div>
+              <dt>推荐系统</dt>
+              <dd>Persona 向量、内容质量门、候选召回、LLM rerank、24 小时面板缓存。</dd>
+            </div>
+            <div>
+              <dt>工程架构</dt>
+              <dd>Next.js 前端、FastAPI 后端、PostgreSQL / pgvector、Redis、worker 和浏览器扩展。</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="product-shot web-showcase">
+          <img
+            src="/assets/media/thyself-landing.png"
+            alt="Thyself 官网 Salvage your taste and curiosity 首屏截图"
+            width="1440"
+            height="1100"
+            loading="lazy"
+          />
+          <figcaption>Thyself 上线站点 · Daily content panel</figcaption>
+        </figure>
       </section>
 
       <section class="tile tile-dark-3 heritage-tile" id="heritage" aria-labelledby="heritage-title">
@@ -194,6 +234,7 @@
       <span>Jason Xun</span>
       <a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.quanzhiping.com/" target="_blank" rel="noopener">全智评</a>
+      <a href="https://www.thyself.cc/" target="_blank" rel="noopener">Thyself</a>
     </footer>
   </body>
 </html>
