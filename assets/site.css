@@ -330,8 +330,7 @@ h3 {
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.feature-spec div,
-.archive-list a {
+.feature-spec div {
   display: grid;
   grid-template-columns: minmax(120px, 0.55fr) minmax(0, 1fr);
   gap: 22px;
@@ -339,14 +338,12 @@ h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.feature-spec span,
-.archive-list span {
+.feature-spec span {
   color: var(--dark-muted);
   font-size: 14px;
 }
 
-.feature-spec strong,
-.archive-list strong {
+.feature-spec strong {
   font-size: 21px;
   font-weight: 600;
   line-height: 1.19;
@@ -483,70 +480,24 @@ h3 {
   color: var(--dark-muted);
 }
 
-.archive-cta {
-  grid-template-columns: minmax(0, 0.8fr) auto;
-  gap: 48px;
-  justify-content: center;
-  min-height: 460px;
-}
-
-.archive-cta div {
-  max-width: 720px;
-}
-
-.archive-cta h2,
-.archive-cta p {
-  margin: 0;
-}
-
-.archive-cta p {
-  margin-top: 18px;
-  color: #333333;
-  font-size: 21px;
-}
-
-.subpage-hero,
-.archive-page {
+.subpage-hero {
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
   gap: 64px;
   padding-left: max(22px, calc((100vw - var(--wide)) / 2 + 72px));
   padding-right: max(22px, calc((100vw - var(--wide)) / 2 + 72px));
 }
 
-.subpage-hero .tile-copy,
-.archive-page .tile-copy {
+.subpage-hero .tile-copy {
   margin: 0;
   text-align: left;
 }
 
-.subpage-hero .lead,
-.archive-page .lead {
+.subpage-hero .lead {
   margin-left: 0;
 }
 
 .subpage-hero .actions {
   justify-content: flex-start;
-}
-
-.archive-list {
-  width: 100%;
-  border-top: 1px solid var(--hairline);
-}
-
-.archive-list a {
-  border-bottom-color: var(--hairline);
-}
-
-.archive-list span {
-  color: var(--muted);
-}
-
-.archive-list strong {
-  color: var(--ink);
-}
-
-.archive-list a:hover strong {
-  color: var(--blue);
 }
 
 .site-footer {
@@ -578,8 +529,7 @@ h3 {
 
   .feature-tile,
   .system-tile,
-  .subpage-hero,
-  .archive-page {
+  .subpage-hero {
     grid-template-columns: 1fr;
   }
 
@@ -631,8 +581,7 @@ h3 {
   .tile,
   .feature-tile,
   .system-tile,
-  .subpage-hero,
-  .archive-page {
+  .subpage-hero {
     min-height: auto;
     padding: 48px 14px;
   }
@@ -667,8 +616,7 @@ h3 {
     max-height: 420px;
   }
 
-  .feature-spec div,
-  .archive-list a {
+  .feature-spec div {
     grid-template-columns: 1fr;
     gap: 6px;
   }
@@ -691,10 +639,6 @@ h3 {
 
   .knowledge-row span {
     margin-top: 28px;
-  }
-
-  .archive-cta {
-    grid-template-columns: 1fr;
   }
 
   .site-footer {
