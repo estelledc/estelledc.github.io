@@ -1,3 +1,78 @@
+/* —— Editorial Monocle hub tokens —— */
+:root {
+  --ink: #1a1a1a;
+  --paper: #faf6f0;
+  --accent: #c4452d;
+  --muted: #6b6862;
+  --rule: rgba(0, 0, 0, 0.12);
+  --code-bg: #f1ece4;
+  --fs-display: 4.5rem;
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.375rem;
+  --fs-body: 1.0625rem;
+  --fs-caption: 0.875rem;
+  --font-serif: "Source Serif Pro", "Noto Serif SC", Georgia, serif;
+  --font-sans: Inter, "PingFang SC", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", Menlo, monospace;
+  --reading-width: 68ch;
+}
+
+body {
+  font-family: var(--font-serif);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+/* 统一 tile 调色板 — 保留语义类，但取值收敛 */
+.tile-light { background: var(--paper); color: var(--ink); }
+.tile-parchment { background: #f1ece4; color: var(--ink); }
+.tile-dark { background: #2a2825; color: #f1ece4; }
+.tile-dark-3 { background: #1a1a1a; color: #faf6f0; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tile h2, .hero-tile h1 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--muted);
+  max-width: var(--reading-width);
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--ink);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: var(--ink);
+  display: inline-block;
+  transition: background 0.15s, color 0.15s;
+}
+.pill:hover { background: var(--ink); color: var(--paper); }
+.pill-small { font-size: 0.75rem; padding: 0.3em 0.7em; }
+
+.brand-mark {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
 :root {
   color-scheme: light;
   --blue: #0066cc;
