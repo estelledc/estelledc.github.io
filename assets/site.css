@@ -1,20 +1,20 @@
-/* —— Editorial Monocle hub tokens —— */
+/* —— Editorial Monocle hub tokens (Jason DS bridge) —— */
 :root {
-  --ink: #1a1a1a;
-  --paper: #faf6f0;
-  --accent: #c4452d;
-  --muted: #6b6862;
-  --rule: rgba(0, 0, 0, 0.12);
-  --code-bg: #f1ece4;
-  --fs-display: 4.5rem;
+  --ink: var(--jx-ink);
+  --paper: var(--jx-paper);
+  --accent: var(--jx-accent);
+  --muted: var(--jx-ink-muted);
+  --rule: var(--jx-rule);
+  --code-bg: var(--jx-surface-sunk);
+  --fs-display: 64px;
   --fs-h1: 3rem;
   --fs-h2: 2rem;
   --fs-h3: 1.375rem;
   --fs-body: 1.0625rem;
   --fs-caption: 0.875rem;
-  --font-serif: "Source Serif Pro", "Noto Serif SC", Georgia, serif;
-  --font-sans: Inter, "PingFang SC", -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", Menlo, monospace;
+  --font-serif: var(--jx-font-display);
+  --font-sans: var(--jx-font-sans-zh);
+  --font-mono: var(--jx-font-mono);
   --reading-width: 68ch;
 }
 
@@ -41,7 +41,12 @@ body {
 
 .tile h2, .hero-tile h1 {
   font-family: var(--font-serif);
-  letter-spacing: -0.02em;
+  letter-spacing: 0; /* 中文标题强制 0 字距 */
+}
+
+.hero-tile h1 {
+  font-size: clamp(40px, 7vw, 64px);
+  letter-spacing: 0;
 }
 
 .lead {
@@ -75,20 +80,18 @@ body {
 
 :root {
   color-scheme: light dark;
-  --blue: #0066cc;
+  --blue: var(--jx-accent);
   --blue-focus: #0071e3;
   --blue-dark: #2997ff;
-  --ink: #1d1d1f;
-  --muted: #7a7a7a;
-  --dark-muted: #cccccc;
-  --canvas: #ffffff;
-  --parchment: #f5f5f7;
-  --pearl: #fafafc;
-  --tile-dark: #272729;
-  --tile-dark-2: #2a2a2c;
-  --black: #000000;
-  --hairline: #e0e0e0;
-  --soft-line: rgba(0, 0, 0, 0.08);
+  --canvas: var(--jx-paper);
+  --parchment: var(--jx-surface-sunk);
+  --pearl: var(--jx-surface);
+  --tile-dark: #0d0a07;
+  --tile-dark-2: #100c08;
+  --black: var(--jx-ink);
+  --hairline: var(--jx-rule);
+  --soft-line: var(--jx-rule-soft);
+  --dark-muted: var(--jx-ink-faint);
   --content: 980px;
   --wide: 1440px;
   --nav-height: 44px;
@@ -968,4 +971,75 @@ h3 {
     --dark-muted: #a39d92;
     --product-shadow: 0 1px 0 rgba(232,228,220,0.06), 0 8px 24px rgba(0,0,0,0.6);
   }
+}
+
+/* —— Jason DS · Capability Axis 五栏 —— */
+.jx-axis__grid {
+  list-style: none;
+  padding: 0;
+  margin: var(--jx-space-5) 0 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid var(--jx-rule);
+}
+.jx-axis__col {
+  padding: var(--jx-space-5);
+  border-right: 1px solid var(--jx-rule);
+}
+.jx-axis__col:last-child { border-right: none; }
+.jx-axis__num {
+  font-family: var(--jx-font-mono);
+  font-size: var(--jx-fs-micro);
+  letter-spacing: var(--jx-tracking-eyebrow);
+  color: var(--jx-ink-faint);
+}
+.jx-axis__name {
+  font-family: var(--jx-font-sans-zh);
+  font-size: var(--jx-fs-h3);
+  font-weight: var(--jx-weight-heading);
+  line-height: var(--jx-leading-tight);
+  margin: var(--jx-space-3) 0 var(--jx-space-4);
+  color: var(--jx-ink);
+}
+.jx-axis__count {
+  font-family: var(--jx-font-mono);
+  font-size: var(--jx-fs-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--jx-tracking-eyebrow);
+  color: var(--jx-ink-muted);
+  margin: var(--jx-space-2) 0;
+}
+.jx-axis__sat {
+  list-style: none;
+  padding: 0;
+  margin: var(--jx-space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--jx-space-2);
+}
+.jx-axis__sat li {
+  font-family: var(--jx-font-sans-zh);
+  font-size: var(--jx-fs-sm);
+}
+.jx-axis__sat a {
+  color: var(--jx-ink-2);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--jx-rule-strong);
+}
+.jx-axis__sat a:hover {
+  color: var(--jx-accent);
+  text-decoration-color: var(--jx-accent);
+}
+
+@media (max-width: 720px) {
+  .jx-axis__grid {
+    grid-template-columns: 1fr;
+  }
+  .jx-axis__col {
+    border-right: none;
+    border-bottom: 1px solid var(--jx-rule);
+  }
+  .jx-axis__col:last-child { border-bottom: none; }
 }

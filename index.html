@@ -9,6 +9,9 @@
     />
     <title>Jason Xun | Product Systems Builder</title>
     <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/jx/tokens.css" />
+    <link rel="stylesheet" href="/assets/jx/base.css" />
+    <link rel="stylesheet" href="/assets/jx/components.css" />
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
@@ -244,26 +247,78 @@
         </div>
       </section>
 
-      <section class="tile tile-dark-2" id="knowledge" aria-labelledby="knowledge-title">
-        <div class="section-header section-header-dark">
-          <p class="eyebrow">Knowledge Map</p>
-          <h2 id="knowledge-title">四个支撑长期身份的能力面。</h2>
-        </div>
-        <div class="knowledge-row">
-          <a href="#identity"><strong>Product Judgment</strong><span>需求澄清、问题边界、优先级和上线价值判断。</span></a>
-          <a href="#work"><strong>System Delivery</strong><span>前端、后端、数据流、部署和跨端体验交付。</span></a>
-          <a href="#work"><strong>AI Orchestration</strong><span>Agent 工作流、上下文工程、checkpoint、interrupt 和 QA。</span></a>
-          <a href="#system"><strong>Compounding System</strong><span>调试纪律、真机验证、复盘、Wiki 和反馈闭环。</span></a>
+      <section class="tile" id="knowledge" aria-labelledby="knowledge-title" style="background: var(--jx-paper); color: var(--jx-ink);">
+        <div class="tile-copy">
+          <p class="jx-eyebrow"><span lang="en">&sect;I &middot; CAPABILITY AXES</span><span class="jx-eyebrow__rule" aria-hidden="true"></span><span lang="en">5 AXES</span></p>
+          <h2 id="knowledge-title">五条能力面，每面挂着真实 satellite。</h2>
+          <ol class="jx-axis__grid">
+            <li class="jx-axis__col">
+              <span class="jx-axis__num" lang="en">I</span>
+              <h3 class="jx-axis__name">硬核工程基础</h3>
+              <p class="jx-axis__count" lang="en">SYSTEM DELIVERY &middot; 前端、后端、数据流、部署和跨端体验交付。</p>
+              <ul class="jx-axis__sat">
+                <li><a href="https://estelledc.github.io/my_mips/">my_mips</a></li>
+                <li><a href="https://estelledc.github.io/HardwareDecoder/">HardwareDecoder</a></li>
+                <li><a href="https://estelledc.github.io/hust-eic-os-review/">操作系统</a></li>
+                <li><a href="https://estelledc.github.io/hust-eic-microwave-from-scratch/">微波技术</a></li>
+              </ul>
+            </li>
+            <li class="jx-axis__col">
+              <span class="jx-axis__num" lang="en">II</span>
+              <h3 class="jx-axis__name">AI 工程实操</h3>
+              <p class="jx-axis__count" lang="en">AI ORCHESTRATION &middot; Agent 工作流、上下文工程、checkpoint、interrupt 和 QA。</p>
+              <ul class="jx-axis__sat">
+                <li><a href="https://estelledc.github.io/study/">study</a></li>
+                <li><a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">LangChain 教程</a></li>
+                <li><a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能导读</a></li>
+              </ul>
+            </li>
+            <li class="jx-axis__col">
+              <span class="jx-axis__num" lang="en">III</span>
+              <h3 class="jx-axis__name">知识结构化</h3>
+              <p class="jx-axis__count" lang="en">COMPOUNDING SYSTEM &middot; 调试纪律、真机验证、复盘、Wiki 和反馈闭环。</p>
+              <p class="jx-axis__count" lang="en">8 STATIC SITES</p>
+            </li>
+            <li class="jx-axis__col">
+              <span class="jx-axis__num" lang="en">IV</span>
+              <h3 class="jx-axis__name">产品落地</h3>
+              <p class="jx-axis__count" lang="en">PRODUCT JUDGMENT &middot; 需求澄清、问题边界、优先级和上线价值判断。</p>
+              <ul class="jx-axis__sat">
+                <li><a class="jx-pill" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">quanzhiping</a></li>
+                <li><a class="jx-pill" href="https://www.thyself.cc/" target="_blank" rel="noopener">Thyself</a></li>
+              </ul>
+            </li>
+            <li class="jx-axis__col">
+              <span class="jx-axis__num" lang="en">V</span>
+              <h3 class="jx-axis__name">完整阅读人格</h3>
+              <p class="jx-axis__count" lang="en">73 BOOKS &middot; 长期阅读人格的事实证据。</p>
+              <ul class="jx-axis__sat">
+                <li><a href="https://estelledc.github.io/after-reading/">73 本书架</a></li>
+              </ul>
+            </li>
+          </ol>
         </div>
       </section>
 
     </main>
 
-    <footer class="site-footer">
-      <span>Jason Xun</span>
-      <a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.quanzhiping.com/" target="_blank" rel="noopener">全智评</a>
-      <a href="https://www.thyself.cc/" target="_blank" rel="noopener">Thyself</a>
+    <footer class="jx-footer">
+      <div class="jx-footer__colophon">
+        <strong>Jason Notebook</strong>
+        <span lang="en">VOL &middot; MMXXVI</span>
+      </div>
+      <nav class="jx-footer__index">
+        <a href="https://estelledc.github.io/study/">study</a>
+        <a href="https://estelledc.github.io/after-reading/">书架</a>
+        <a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能</a>
+        <a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">langchain</a>
+        <a href="https://estelledc.github.io/hust-eic-os-review/">OS</a>
+        <a href="https://estelledc.github.io/hust-eic-microwave-from-scratch/">微波</a>
+        <a href="https://estelledc.github.io/HardwareDecoder/">硬件解码</a>
+        <a href="https://estelledc.github.io/my_mips/">MIPS</a>
+        <a href="https://github.com/estelledc">github</a>
+      </nav>
+      <time class="jx-footer__stamp" datetime="2026-05-31" lang="en">2026&middot;05&middot;31</time>
     </footer>
   </body>
 </html>
