@@ -146,7 +146,7 @@ a:focus-visible,
   justify-content: space-between;
   height: var(--nav-height);
   padding: 0 max(22px, calc((100vw - var(--wide)) / 2 + 22px));
-  color: #ffffff;
+  color: var(--paper);
   background: var(--black);
   font-size: 12px;
   line-height: 1;
@@ -202,7 +202,8 @@ a:focus-visible,
   justify-content: space-between;
   height: var(--subnav-height);
   padding: 0 max(22px, calc((100vw - var(--wide)) / 2 + 22px));
-  background: rgba(245, 245, 247, 0.82);
+  background: color-mix(in oklab, var(--paper), transparent 18%);
+  color: var(--ink);
   border-bottom: 1px solid var(--soft-line);
   backdrop-filter: saturate(180%) blur(20px);
 }
@@ -216,7 +217,7 @@ a:focus-visible,
 
 .sub-nav div {
   gap: 18px;
-  color: #333333;
+  color: var(--ink);
   font-size: 14px;
 }
 
