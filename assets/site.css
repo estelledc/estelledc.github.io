@@ -74,7 +74,7 @@ body {
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   --blue: #0066cc;
   --blue-focus: #0071e3;
   --blue-dark: #2997ff;
@@ -938,5 +938,34 @@ h3 {
   .pill:hover,
   .pill:active {
     transform: none;
+  }
+}
+
+/* —— Dark mode (system-following only, no toggle) —— */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    /* 第一组：Editorial Monocle 主调 */
+    --ink: #e8e4dc;
+    --paper: #15110d;
+    --accent: #5b8def;
+    --muted: #a39d92;
+    --rule: rgba(232, 228, 220, 0.12);
+    --code-bg: #1f1a14;
+    /* 第二组：Apple 风格布局 token（覆盖 L76 的第二个 :root） */
+    --blue: #5b8def;
+    --blue-focus: #7ba3f5;
+    --blue-dark: #3d6cc7;
+    --canvas: #15110d;
+    --parchment: #1c1812;
+    --pearl: #211c15;
+    /* 注意：.tile-dark/.tile-dark-2/.tile-dark-3 是设计语义（深色 tile 比正文更深），dark mode 下要保持这层级 */
+    --tile-dark: #0d0a07;
+    --tile-dark-2: #100c08;
+    --black: #e8e4dc;
+    --hairline: rgba(232, 228, 220, 0.18);
+    --soft-line: rgba(232, 228, 220, 0.08);
+    --dark-muted: #a39d92;
+    --product-shadow: 0 1px 0 rgba(232,228,220,0.06), 0 8px 24px rgba(0,0,0,0.6);
   }
 }
