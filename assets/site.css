@@ -144,9 +144,12 @@ a:focus-visible,
   justify-content: space-between;
   height: var(--nav-height);
   padding: 0 max(22px, calc((100vw - var(--wide)) / 2 + 22px));
-  color: var(--paper);
-  background: var(--black);
-  font-size: 12px;
+  color: var(--ink);
+  background: color-mix(in oklab, var(--paper), transparent 16%);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  font-size: 13px;
   line-height: 1;
 }
 
@@ -168,7 +171,7 @@ a:focus-visible,
   width: 20px;
   height: 20px;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid var(--ink);
   border-radius: 50%;
   font-size: 12px;
   font-weight: 600;
@@ -182,12 +185,17 @@ a:focus-visible,
 
 .site-nav {
   gap: 22px;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
+}
+
+.site-nav a {
+  color: inherit;
+  transition: color 0.15s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: #ffffff;
+  color: var(--accent);
 }
 
 .tile {
