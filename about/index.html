@@ -3,56 +3,123 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Jason Xun，产品系统构建者，关注产品判断、AI 协作、全栈交付和知识复利。" />
+    <meta name="description" content="Jason Xun，产品系统构建者。把硬核工程基础啃透，再把它系统化成能复用的学习站。" />
     <title>About | Jason Xun</title>
     <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/jx/tokens.css" />
+    <link rel="stylesheet" href="/assets/jx/base.css" />
+    <link rel="stylesheet" href="/assets/jx/components.css" />
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" aria-label="主导航">
       <a class="brand" href="/" aria-label="回到首页">
         <span class="brand-mark">X</span>
-        <span>Jason Xun</span>
+        <span>Jason Xun · Product Systems Builder</span>
       </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="/">首页</a>
+      <nav class="site-nav">
+        <a href="/#identity">身份</a>
         <a href="/#work">项目</a>
+        <a href="/#thyself">Thyself</a>
+        <a href="/#knowledge">能力面</a>
+        <a href="/about/" aria-current="page">About</a>
       </nav>
     </header>
 
-    <nav class="sub-nav" aria-label="页面导航">
-      <a class="sub-nav-title" href="/about/">About</a>
-      <div>
-        <a href="/">Home</a>
-        <a class="pill pill-small" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">全智评</a>
-      </div>
-    </nav>
+    <main class="about-shell">
+      <section class="about-hero">
+        <p class="jx-eyebrow"><span lang="en">§ ABOUT</span><span class="jx-eyebrow__rule" aria-hidden="true"></span><span lang="en">2026·05·31</span></p>
+        <h1 class="about-title">把硬核工程基础啃透，再把它系统化成能复用的学习站。</h1>
+        <p class="about-lede">
+          我是 Jason，22 岁，本科大三在读，编程零基础重新开始。我不把自己定义为某个岗位的初级版本，而是从真实问题出发把产品判断、AI 协作、全栈工程和验证复盘组织成可交付系统 —— 教学作者、产品作者、写作者三件事并行。
+        </p>
+      </section>
 
-    <main>
-      <section class="tile hero-tile tile-light subpage-hero">
-        <div class="tile-copy">
-          <p class="eyebrow">About</p>
-          <h1>我想成为能把复杂想法带到真实世界的人。</h1>
-          <p class="lead">
-            我是 Jason Xun。未来我不想被“前端、后端、AI 工具使用者”这些单点标签锁住，而是成为产品系统构建者：能判断该做什么，设计系统如何运转，组织 AI、工具和人协作，并对上线后的结果负责。
-          </p>
-          <div class="actions">
-            <a class="pill" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">全智评</a>
-            <a class="pill pill-secondary" href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub</a>
-          </div>
+      <section class="about-section">
+        <p class="jx-eyebrow"><span lang="en">§ I · 身份</span></p>
+        <div class="about-prose">
+          <p>三件事同时做：<strong>啃硬核工程基础</strong>（CPU/OS/微波/硬件解码 都从零看到能跑），<strong>把 AI 工程系统化</strong>（study/langchain-tutorial/embodied-ai 三个学习站，把读到的写成能复用的教程），<strong>把学到的落成产品</strong>（quanzhiping 公司业务 + Thyself 个人 iOS）。</p>
+          <p>这套做法的来源是一个判断：我不想被 "前端 / 后端 / AI 工具使用者" 这些岗位标签锁住，所以我从最底层补基础，从最上层看真实问题，中间用 satellite 学习站作为公开的工件 —— 工件本身就是我的能力证据。</p>
         </div>
-        <aside class="feature-spec light-spec" aria-label="个人方向">
-          <div><span>身份</span><strong>Product Systems Builder</strong></div>
-          <div><span>方法</span><strong>Sensemaking / Build / Verify / Compound</strong></div>
-          <div><span>长期方向</span><strong>AI 协作下的产品判断与系统交付</strong></div>
-        </aside>
+      </section>
+
+      <section class="about-section">
+        <p class="jx-eyebrow"><span lang="en">§ II · 方法</span></p>
+        <div class="about-prose">
+          <p><strong>Sensemaking</strong> · 在动手前先把问题解释清楚，从第一性原理推导，不直接抄现有方案。</p>
+          <p><strong>Build</strong> · 写到能跑起来。每件事都有可访问的 URL 或代码仓 —— 这页右上角的 satellite 链接就是当前阶段的全部工件。</p>
+          <p><strong>Verify</strong> · 写完不算完，要验证。包括别人能不能读懂、能不能复用、有没有死链 / 死代码 / 内部信息泄漏。</p>
+          <p><strong>Compound</strong> · 学一个记一个，下次能直接用。学习站 / 笔记 / 书架都是这套复利系统的工件。</p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <p class="jx-eyebrow"><span lang="en">§ III · 工件</span></p>
+        <ol class="about-axes">
+          <li>
+            <span class="about-axes__num" lang="en">I</span>
+            <h3>硬核工程基础</h3>
+            <ul>
+              <li><a href="https://estelledc.github.io/my_mips/">my_mips</a> · 单周期 MIPS CPU Verilog</li>
+              <li><a href="https://estelledc.github.io/HardwareDecoder/">HardwareDecoder</a> · H.264 硬件解码 Swift</li>
+              <li><a href="https://estelledc.github.io/hust-eic-os-review/">操作系统</a> · 5 章 + 9 个 lab</li>
+              <li><a href="https://estelledc.github.io/hust-eic-microwave-from-scratch/">微波技术</a> · 8 章网页书</li>
+            </ul>
+          </li>
+          <li>
+            <span class="about-axes__num" lang="en">II</span>
+            <h3>AI 工程实操</h3>
+            <ul>
+              <li><a href="https://estelledc.github.io/study/">study</a> · 项目研究 + 论文研究</li>
+              <li><a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">LangChain 教程</a> · 4 周 14 篇中文 learning-by-doing</li>
+              <li><a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能导读</a> · 13 篇 paper 期刊风</li>
+            </ul>
+          </li>
+          <li>
+            <span class="about-axes__num" lang="en">III</span>
+            <h3>产品落地</h3>
+            <ul>
+              <li><a class="jx-pill" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">quanzhiping</a></li>
+              <li><a class="jx-pill" href="https://www.thyself.cc/" target="_blank" rel="noopener">Thyself</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="about-axes__num" lang="en">IV</span>
+            <h3>完整阅读人格</h3>
+            <ul>
+              <li><a href="https://estelledc.github.io/after-reading/">73 本完读书架</a></li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="about-section">
+        <p class="jx-eyebrow"><span lang="en">§ IV · 联系</span></p>
+        <div class="about-contacts">
+          <a class="jx-pill" href="https://github.com/estelledc" target="_blank" rel="noopener">github · estelledc</a>
+          <a class="jx-pill" href="https://www.bilibili.com/video/BV1Pv1EB3EQT" target="_blank" rel="noopener">bilibili · 演示</a>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>Jason Xun</span>
-      <a href="/">Home</a>
-      <a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub</a>
+    <footer class="jx-footer">
+      <div class="jx-footer__colophon">
+        <strong>Jason Notebook</strong>
+        <span lang="en">VOL · MMXXVI</span>
+      </div>
+      <nav class="jx-footer__index">
+        <a href="/">回首页</a>
+        <a href="https://estelledc.github.io/study/">study</a>
+        <a href="https://estelledc.github.io/after-reading/">书架</a>
+        <a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能</a>
+        <a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">langchain</a>
+        <a href="https://estelledc.github.io/hust-eic-os-review/">OS</a>
+        <a href="https://estelledc.github.io/hust-eic-microwave-from-scratch/">微波</a>
+        <a href="https://estelledc.github.io/HardwareDecoder/">硬件解码</a>
+        <a href="https://estelledc.github.io/my_mips/">MIPS</a>
+        <a href="https://github.com/estelledc">github</a>
+      </nav>
+      <time class="jx-footer__stamp" datetime="2026-05-31" lang="en">2026·05·31</time>
     </footer>
   </body>
 </html>
