@@ -21,10 +21,10 @@
         <span>Jason Xun · Product Systems Builder</span>
       </a>
       <nav class="site-nav">
-        <a href="#identity">身份</a>
         <a href="#work">项目</a>
         <a href="#thyself">Thyself</a>
-        <a href="#knowledge">能力面</a>
+        <a href="#heritage">触见千年</a>
+        <a href="#satellites">学习站</a>
         <a href="/about/">About</a>
       </nav>
     </header>
@@ -38,8 +38,8 @@
             我不把自己定义成某个岗位的初级版本，而是从真实问题出发，把产品判断、AI 协作、全栈工程和验证复盘组织成可交付系统。
           </p>
           <div class="actions" aria-label="主要操作">
-            <a class="pill" href="#identity">看身份重构</a>
-            <a class="pill pill-secondary" href="#work">看代表项目</a>
+            <a class="pill" href="#work">看代表项目</a>
+            <a class="pill pill-secondary" href="/about/">About</a>
           </div>
         </div>
 
@@ -55,33 +55,6 @@
         </figure>
       </section>
 
-      <section class="tile tile-parchment identity-tile" id="identity" aria-labelledby="identity-title">
-        <div class="tile-copy identity-copy">
-          <p class="eyebrow">Identity Reset</p>
-          <h2 id="identity-title">不是某个 AI 标签下的执行者，而是产品系统构建者。</h2>
-          <p class="lead">
-            AI 会继续降低执行成本，但不会替人决定什么问题值得做、系统怎样闭环、结果如何被验证。我的长期职业理想，是成为能在模糊场景里定义方向、组织工具与人、并对上线结果负责的人。
-          </p>
-        </div>
-        <div class="identity-grid" aria-label="身份认知重构">
-          <div>
-            <span>01</span>
-            <strong>从岗位标签到问题所有权</strong>
-            <p>前端、后端和 AI 工具都是手段；真正的身份是对一个真实问题从定义、构建到结果负责。</p>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>从写代码到设计系统</strong>
-            <p>代码只是系统的一层。更重要的是数据流、反馈闭环、质量门、部署、验证和复盘机制。</p>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>从个人执行到 AI 协作编排</strong>
-            <p>未来优势来自会拆任务、给上下文、设验收标准，并让 Agent、工具和人协同产出。</p>
-          </div>
-        </div>
-      </section>
-
       <section class="tile tile-dark feature-tile" id="work" aria-labelledby="work-title">
         <div class="tile-copy">
           <p class="eyebrow">Selected Work</p>
@@ -91,7 +64,6 @@
           </p>
           <div class="actions">
             <a class="pill" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">打开线上产品</a>
-            <a class="text-link on-dark" href="#system">查看工作系统</a>
           </div>
         </div>
 
@@ -115,36 +87,6 @@
         </div>
       </section>
 
-      <section class="tile tile-parchment" aria-labelledby="portfolio-title">
-        <div class="section-header">
-          <p class="eyebrow">Portfolio</p>
-          <h2 id="portfolio-title">项目不是列表，是能力的证据。</h2>
-        </div>
-
-        <div class="utility-grid">
-          <article class="utility-card">
-            <span>AI Product · Longform</span>
-            <h3><a href="#thyself">Thyself</a></h3>
-            <p>有限的长文推荐系统。每天 8 篇、推荐理由可解释，用 Persona、质量门和事件反馈管理长期阅读兴趣。</p>
-          </article>
-          <article class="utility-card">
-            <span>visionOS · 全国二等奖</span>
-            <h3><a href="#heritage">触见千年</a></h3>
-            <p>Vision Pro 文物体验项目。把曾侯乙编钟做成可交互的沉浸空间，用手势、乐器控制和空间环境连接文物与演奏。</p>
-          </article>
-          <article class="utility-card">
-            <span>Frontend · H5</span>
-            <h3>移动端海报分享</h3>
-            <p>React、Canvas、WebGL、Three.js renderer、Zustand ref、App 内外降级和真机验证。</p>
-          </article>
-          <article class="utility-card">
-            <span>Agent Workflow · LangGraph</span>
-            <h3>AI 活动规划 Agent</h3>
-            <p>从自造调度迁移到 LangGraph，补齐 checkpoint、interrupt、Saga 补偿和 11 / 11 E2E 验证。</p>
-          </article>
-        </div>
-      </section>
-
       <section class="tile tile-light thyself-tile" id="thyself" aria-labelledby="thyself-title">
         <div class="thyself-copy">
           <p class="eyebrow">Daily Curation System</p>
@@ -154,22 +96,7 @@
           </p>
           <div class="actions">
             <a class="pill" href="https://www.thyself.cc/" target="_blank" rel="noopener">打开线上产品</a>
-            <a class="text-link" href="#system">查看工作系统</a>
           </div>
-          <dl class="case-points light-points" aria-label="Thyself 项目要点">
-            <div>
-              <dt>产品约束</dt>
-              <dd>8 篇 / 天 · 不刷新 · 不无限滚动 · 推荐理由必须可读。</dd>
-            </div>
-            <div>
-              <dt>推荐系统</dt>
-              <dd>Persona 向量、内容质量门、候选召回、LLM rerank、24 小时面板缓存。</dd>
-            </div>
-            <div>
-              <dt>工程架构</dt>
-              <dd>Next.js 前端、FastAPI 后端、PostgreSQL / pgvector、Redis、worker 和浏览器扩展。</dd>
-            </div>
-          </dl>
         </div>
 
         <figure class="product-shot web-showcase">
@@ -194,100 +121,32 @@
           ></iframe>
         </div>
         <div class="heritage-copy">
-          <p class="eyebrow">visionOS Case Study</p>
+          <p class="eyebrow">visionOS · 全国二等奖</p>
           <h2 id="heritage-title">触见千年</h2>
           <p class="lead">
-            一个关于“敲钟”的 Apple Vision Pro 体验：用户进入曾侯乙编钟沉浸空间，通过手势唤出控制面板，切换木槌、棒槌、乐谱和环境，并直接操作 3D 编钟模型。
+            一个关于"敲钟"的 Apple Vision Pro 体验：用户进入曾侯乙编钟沉浸空间，通过手势唤出控制面板，切换木槌、棒槌、乐谱和环境，并直接操作 3D 编钟模型。
           </p>
           <div class="actions">
             <a class="pill" href="https://www.bilibili.com/video/BV1Pv1EB3EQT" target="_blank" rel="noopener">在 B 站观看</a>
-            <a class="text-link on-dark" href="#knowledge">查看相关能力</a>
           </div>
-          <dl class="case-points" aria-label="触见千年项目要点">
-            <div>
-              <dt>平台</dt>
-              <dd>visionOS · SwiftUI · RealityKit · ARKit</dd>
-            </div>
-            <div>
-              <dt>交互</dt>
-              <dd>左手握拳唤出空间控制面板，支持拖拽、缩放、旋转和乐器开关。</dd>
-            </div>
-            <div>
-              <dt>工程</dt>
-              <dd>预加载 3D 场景、分步加载进度、沉浸空间切换和 RealityKit 内容包管理。</dd>
-            </div>
-          </dl>
         </div>
       </section>
 
-      <section class="tile tile-light system-tile" id="system" aria-labelledby="system-title">
+      <section class="tile tile-parchment satellites-tile" id="satellites" aria-labelledby="satellites-title">
         <div class="tile-copy">
-          <p class="eyebrow">Operating System</p>
-          <h2 id="system-title">我的工作系统。</h2>
+          <p class="eyebrow">Learning Satellites</p>
+          <h2 id="satellites-title">学一个记一个，公开 5 个学习站。</h2>
           <p class="lead">
-            我把学习和交付拆成一条闭环链路：每天记录事实，问题单独复盘，学到的模式写成笔记，跨页面关系进入 Wiki，行动项通过反馈文档追踪。
+            从硬核工程基础到 AI 工程实操，每个 satellite 都是一段从零到能跑的过程证据。
           </p>
         </div>
-        <div class="process-list">
-          <div><span>01</span><strong>Daily</strong><p>记录事实、阻塞和当天学到的东西。</p></div>
-          <div><span>02</span><strong>Problems</strong><p>把非平凡问题写清根因、排查路径和复用经验。</p></div>
-          <div><span>03</span><strong>Learnings</strong><p>把知识点沉淀成以后能直接复用的操作手册。</p></div>
-          <div><span>04</span><strong>Wiki</strong><p>维护知识地图、当前进度、矛盾和缺口。</p></div>
-          <div><span>05</span><strong>Feedback</strong><p>把外部反馈拆成可执行、可检查的行动项。</p></div>
-        </div>
-      </section>
-
-      <section class="tile" id="knowledge" aria-labelledby="knowledge-title" style="background: var(--jx-paper); color: var(--jx-ink);">
-        <div class="tile-copy">
-          <p class="jx-eyebrow"><span lang="en">&sect;I &middot; CAPABILITY AXES</span><span class="jx-eyebrow__rule" aria-hidden="true"></span><span lang="en">5 AXES</span></p>
-          <h2 id="knowledge-title">五条能力面，每面挂着真实 satellite。</h2>
-          <ol class="jx-axis__grid">
-            <li class="jx-axis__col">
-              <span class="jx-axis__num" lang="en">I</span>
-              <h3 class="jx-axis__name">硬核工程基础</h3>
-              <p class="jx-axis__count" lang="en">SYSTEM DELIVERY &middot; 前端、后端、数据流、部署和跨端体验交付。</p>
-              <ul class="jx-axis__sat">
-                <li><a href="https://estelledc.github.io/my_mips/">my_mips</a></li>
-                <li><a href="https://estelledc.github.io/HardwareDecoder/">HardwareDecoder</a></li>
-                <li><a href="https://estelledc.github.io/hust-eic-os-review/">操作系统</a></li>
-                <li><a href="https://estelledc.github.io/hust-eic-microwave-from-scratch/">微波技术</a></li>
-              </ul>
-            </li>
-            <li class="jx-axis__col">
-              <span class="jx-axis__num" lang="en">II</span>
-              <h3 class="jx-axis__name">AI 工程实操</h3>
-              <p class="jx-axis__count" lang="en">AI ORCHESTRATION &middot; Agent 工作流、上下文工程、checkpoint、interrupt 和 QA。</p>
-              <ul class="jx-axis__sat">
-                <li><a href="https://estelledc.github.io/study/">study</a></li>
-                <li><a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">LangChain 教程</a></li>
-                <li><a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能导读</a></li>
-              </ul>
-            </li>
-            <li class="jx-axis__col">
-              <span class="jx-axis__num" lang="en">III</span>
-              <h3 class="jx-axis__name">知识结构化</h3>
-              <p class="jx-axis__count" lang="en">COMPOUNDING SYSTEM &middot; 调试纪律、真机验证、复盘、Wiki 和反馈闭环。</p>
-              <p class="jx-axis__count" lang="en">8 STATIC SITES</p>
-            </li>
-            <li class="jx-axis__col">
-              <span class="jx-axis__num" lang="en">IV</span>
-              <h3 class="jx-axis__name">产品落地</h3>
-              <p class="jx-axis__count" lang="en">PRODUCT JUDGMENT &middot; 需求澄清、问题边界、优先级和上线价值判断。</p>
-              <ul class="jx-axis__sat">
-                <li><a class="jx-pill" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">quanzhiping</a></li>
-                <li><a class="jx-pill" href="https://www.thyself.cc/" target="_blank" rel="noopener">Thyself</a></li>
-              </ul>
-            </li>
-            <li class="jx-axis__col">
-              <span class="jx-axis__num" lang="en">V</span>
-              <h3 class="jx-axis__name">完整阅读人格</h3>
-              <p class="jx-axis__count" lang="en">73 BOOKS &middot; 长期阅读人格的事实证据。</p>
-              <ul class="jx-axis__sat">
-                <li><a href="https://estelledc.github.io/after-reading/">73 本书架</a></li>
-              </ul>
-            </li>
-          </ol>
-        </div>
+        <ul class="satellites-list">
+          <li><a href="https://estelledc.github.io/study/">study</a><span>项目研究 + 论文研究</span></li>
+          <li><a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">LangChain 教程</a><span>4 周 14 篇 learning-by-doing</span></li>
+          <li><a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能导读</a><span>13 篇 paper 期刊风</span></li>
+          <li><a href="https://estelledc.github.io/hust-eic-os-review/">操作系统</a><span>5 章 + 9 个 lab</span></li>
+          <li><a href="https://estelledc.github.io/after-reading/">73 本书架</a><span>完整阅读人格</span></li>
+        </ul>
       </section>
 
     </main>
@@ -295,20 +154,15 @@
     <footer class="jx-footer">
       <div class="jx-footer__colophon">
         <strong>Jason Notebook</strong>
-        <span lang="en">VOL &middot; MMXXVI</span>
+        <span lang="en">VOL · MMXXVI</span>
       </div>
       <nav class="jx-footer__index">
-        <a href="https://estelledc.github.io/study/">study</a>
-        <a href="https://estelledc.github.io/after-reading/">书架</a>
-        <a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能</a>
-        <a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">langchain</a>
-        <a href="https://estelledc.github.io/hust-eic-os-review/">OS</a>
-        <a href="https://estelledc.github.io/hust-eic-microwave-from-scratch/">微波</a>
-        <a href="https://estelledc.github.io/HardwareDecoder/">硬件解码</a>
-        <a href="https://estelledc.github.io/my_mips/">MIPS</a>
+        <a href="/about/">about</a>
         <a href="https://github.com/estelledc">github</a>
+        <a href="https://www.quanzhiping.com/" target="_blank" rel="noopener">quanzhiping</a>
+        <a href="https://www.thyself.cc/" target="_blank" rel="noopener">thyself</a>
       </nav>
-      <time class="jx-footer__stamp" datetime="2026-05-31" lang="en">2026&middot;05&middot;31</time>
+      <time class="jx-footer__stamp" datetime="2026-05-31" lang="en">2026·05·31</time>
     </footer>
   </body>
 </html>
