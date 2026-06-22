@@ -422,11 +422,28 @@ h3 {
   text-align: center;
 }
 
+.satellites-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  width: min(100%, 980px);
+}
+
+.satellites-group__label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hairline);
+}
+
 .satellites-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: min(100%, 720px);
+  width: 100%;
   border-top: 1px solid var(--hairline);
 }
 
