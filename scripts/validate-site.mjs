@@ -117,6 +117,22 @@ for (const absolute of htmlFiles) {
     if (!/\bwidth="\d+"/i.test(tag) || !/\bheight="\d+"/i.test(tag)) {
       fail(file, "image is missing intrinsic width or height");
     }
+    if (!/\bdecoding="async"/i.test(tag)) fail(file, "image is missing decoding=async");
+    if (!/\bloading="lazy"/i.test(tag) && !/\bfetchpriority="high"/i.test(tag)) {
+      fail(file, "image needs lazy loading or explicit high fetch priority");
+    }
+  }
+
+  if (/"@type"\s*:\s*"Person"/.test(html) && /"name"\s*:\s*"Jason Xun"/.test(html)) {
+    if (!html.includes('"@id": "https://estelledc.github.io/#person"')) {
+      fail(file, "Jason Xun structured identity is missing the canonical Person @id");
+    }
+  }
+  if (/"name"\s*:\s*"Jason(?: Zhou| Xu)?"/.test(html)) {
+    fail(file, "contains an inconsistent public author name");
+  }
+  if (/<footer[\s\S]*?>[\s\S]*?<time[^>]*>Verified ·/i.test(html)) {
+    fail(file, "page-review timestamp must not be presented as outcome verification");
   }
 
   for (const match of html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/gi)) {
@@ -127,7 +143,7 @@ for (const absolute of htmlFiles) {
 const caseFiles = requiredRoutes.filter((route) => route.startsWith("work/") && route !== "work/index.html");
 for (const file of caseFiles) {
   const html = readFileSync(join(root, file), "utf8");
-  for (const marker of ["case-facts", "english-summary", 'id="evidence"', 'id="limits"', "status-chip"]) {
+  for (const marker of ["case-facts", "english-summary", "jx-case-question", 'id="evidence"', 'id="limits"', "status-chip"]) {
     if (!html.includes(marker)) fail(file, `case contract missing ${marker}`);
   }
 }
@@ -148,11 +164,24 @@ for (const [file, markers] of Object.entries(publicBoundaryMarkers)) {
 }
 
 const workIndex = readFileSync(join(root, "work/index.html"), "utf8");
+const homePage = readFileSync(join(root, "index.html"), "utf8");
+const evidenceManifest = JSON.parse(readFileSync(join(root, "data/evidence.json"), "utf8"));
+const publicSites = JSON.parse(readFileSync(join(root, "data/public-sites.json"), "utf8"));
+for (const marker of [
+  '"@type": "ProfilePage"',
+  '"mainEntity": { "@id": "https://estelledc.github.io/#person" }',
+  "Comparable evidence / 04",
+  "Systems over isolated screens.",
+  "UIKit Lifecycle Lab",
+  "HardwareDecoder",
+]) {
+  if (!homePage.includes(marker)) fail("index.html", `round-two identity contract missing ${marker}`);
+}
 const publicEntryContracts = [
   ["https://www.thyself.cc/", "Thyself"],
   ["https://www.bilibili.com/video/BV1Pv1EB3EQT", "触见千年"],
   ["https://estelledc.github.io/practicemate/", "PracticeMate"],
-  ["https://estelledc.github.io/doubao-auto-system-theme/", "豆包主题适配器"],
+  ["https://github.com/estelledc/doubao-auto-system-theme", "豆包主题适配器"],
   ["https://estelledc.github.io/rhino-bird-2026/", "犀牛鸟 2026"],
   ["https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/", "LangChain 教程"],
   ["https://estelledc.github.io/iot/", "IoT 全栈学习站"],
@@ -168,14 +197,63 @@ for (const [url, label] of publicEntryContracts) {
   if (!workIndex.includes(`href="${url}"`)) fail("work/index.html", `public entry is missing: ${label}`);
 }
 
-const satelliteList = workIndex.match(/<ul class="satellite-list">([\s\S]*?)<\/ul>/);
-if (!satelliteList) {
+const satelliteLists = [...workIndex.matchAll(/<ul class="satellite-list">([\s\S]*?)<\/ul>/g)];
+if (!satelliteLists.length) {
   fail("work/index.html", "More public work list is missing");
 } else {
-  const itemCount = [...satelliteList[1].matchAll(/<li>/g)].length;
+  const itemCount = satelliteLists.reduce((count, list) => count + [...list[1].matchAll(/<li>/g)].length, 0);
   if (itemCount !== publicEntryContracts.length) {
     fail("work/index.html", `expected ${publicEntryContracts.length} public entries, found ${itemCount}`);
   }
+}
+
+for (const marker of ["Product systems", "Learning & explanation", "Engineering labs", 'id="engineering-labs"']) {
+  if (!workIndex.includes(marker)) fail("work/index.html", `round-two work family is missing: ${marker}`);
+}
+
+for (const [key, evidence] of Object.entries(evidenceManifest)) {
+  const contract = new RegExp(
+    `<a[^>]+href="${evidence.sourceUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"[^>]+data-evidence-key="${key}"[\\s\\S]*?<strong>${evidence.display.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</strong>`,
+  );
+  if (!contract.test(homePage)) fail("index.html", `evidence manifest drift: ${key}`);
+}
+if (new Set(publicSites.map((site) => site.url)).size !== publicSites.length) {
+  fail("data/public-sites.json", "public site URLs must be unique");
+}
+if (publicSites.length !== 16 || !publicSites.every((site) => [1, 2, 3].includes(site.publishOrder))) {
+  fail("data/public-sites.json", "expected 16 frontends assigned to publication waves 1–3");
+}
+
+for (const [fragment, label] of [["product-cases", "Product systems"], ["learning-cases", "Learning systems"], ["engineering-labs", "Engineering labs"]]) {
+  if (!workIndex.includes(`href="#${fragment}"`) || !workIndex.includes(`id="${fragment}"`)) {
+    fail("work/index.html", `${label} lens does not resolve to its own section`);
+  }
+}
+
+const siblingRoot = resolve(root, "..");
+const localEvidenceContracts = [
+  {
+    key: "bj-pal-final-pass",
+    file: join(siblingRoot, "bj-pal/docs/eval-100-results.md"),
+    verify: (source) => /final_pass[^\n]*47\/100|47\/100[^\n]*final_pass/i.test(source),
+  },
+  {
+    key: "uikit-ui-tests",
+    file: join(siblingRoot, "UIKitLifecycleDemo/UIKitLifecycleDemoUITests/UIKitLifecycleDemoUITests.swift"),
+    verify: (source) => [...source.matchAll(/^\s*func\s+test\w+\s*\(/gm)].length === 2,
+  },
+  {
+    key: "hardwaredecoder-xctest",
+    files: ["H264StreamTests.swift", "IDRIndexTests.swift", "SPSParserTests.swift"].map((name) => join(siblingRoot, "HardwareDecoder/Tests/HardwareDecoderCoreTests", name)),
+    verify: (source) => [...source.matchAll(/\bfunc\s+test[A-Za-z0-9_]*\s*\(/g)].length === 12,
+  },
+];
+
+for (const contract of localEvidenceContracts) {
+  const files = contract.files ?? [contract.file];
+  if (!files.every(existsSync)) continue;
+  const source = files.map((file) => readFileSync(file, "utf8")).join("\n");
+  if (!contract.verify(source)) fail("data/evidence.json", `local evidence drift: ${contract.key}`);
 }
 
 if (!workIndex.includes("这里负责长期可发现")) {

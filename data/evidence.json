@@ -1,0 +1,26 @@
+{
+  "quanzhiping-shipped": {
+    "display": "Shipped",
+    "status": "Outcome",
+    "sourceUrl": "/work/quanzhiping/",
+    "reviewedAt": "2026-07-11"
+  },
+  "bj-pal-final-pass": {
+    "display": "47 / 100",
+    "status": "Observed",
+    "sourceUrl": "https://github.com/estelledc/bj-pal/blob/main/docs/eval-100-results.md",
+    "reviewedAt": "2026-07-11"
+  },
+  "uikit-ui-tests": {
+    "display": "2 / 2",
+    "status": "Verified",
+    "sourceUrl": "https://github.com/estelledc/UIKitLifecycleDemo/blob/main/UIKitLifecycleDemoUITests/UIKitLifecycleDemoUITests.swift",
+    "reviewedAt": "2026-07-11"
+  },
+  "hardwaredecoder-xctest": {
+    "display": "12 / 12",
+    "status": "Verified",
+    "sourceUrl": "https://github.com/estelledc/HardwareDecoder/tree/main/Tests/HardwareDecoderCoreTests",
+    "reviewedAt": "2026-07-11"
+  }
+}

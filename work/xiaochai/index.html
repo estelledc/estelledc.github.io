@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/assets/jx/tokens.css" />
     <link rel="stylesheet" href="/assets/jx/base.css" />
     <link rel="stylesheet" href="/assets/jx/components.css" />
-    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260711-3" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -36,7 +36,7 @@
         "operatingSystem": "iOS",
         "softwareVersion": "0.0.2",
         "inLanguage": ["zh-CN", "en"],
-        "author": { "@type": "Person", "name": "Jason Xun", "url": "https://estelledc.github.io/" }
+        "author": { "@type": "Person", "@id": "https://estelledc.github.io/#person", "name": "Jason Xun", "url": "https://estelledc.github.io/" }
       }
     </script>
   </head>
@@ -62,7 +62,12 @@
           </dl>
         </header>
 
-        <figure class="case-media case-media--xiaochai"><img src="/assets/media/xiaochai-app.png" alt="小柴 iOS 应用生成分享卡片并打开系统分享面板的模拟器验证截图" width="1206" height="2622" /></figure>
+        <aside class="jx-case-question shell" aria-label="本案例回答的经验问题">
+          <p class="jx-case-question__label">This case answers</p>
+          <div><strong class="jx-case-question__prompt">说说你如何设计一个每天只出现一张纸条的产品，而不把它变成需要账号、云端和无限 Feed 的另一个内容应用。</strong><p class="jx-case-question__context">产品边界是设计本身：本地资源决定每日纸条，涂鸦、分享和 Widget 都围绕这个有限仪式工作。</p></div>
+        </aside>
+
+        <figure class="case-media case-media--xiaochai"><img src="/assets/media/xiaochai-app.png" alt="小柴 iOS 应用生成分享卡片并打开系统分享面板的模拟器验证截图" width="1206" height="2622" loading="lazy" decoding="async" /></figure>
 
         <div class="case-content shell">
           <aside class="case-toc" aria-label="案例目录"><p>On this case</p><nav><a href="#problem">问题</a><a href="#system">系统</a><a href="#decisions">关键取舍</a><a href="#evidence">证据</a><a href="#limits">边界</a></nav></aside>
@@ -116,6 +121,6 @@
 
       <a class="next-case shell" href="/work/quanzhiping/"><div><small>Back to first case · 01 / 06</small><strong>全智评 · 证据优先的实操评价</strong></div><span aria-hidden="true">→</span></a>
     </main>
-    <footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><strong>Jason Xun</strong><p>Product systems, AI orchestration, full-stack delivery.</p></div><nav aria-label="页脚导航"><a href="/">Home</a><a href="/work/">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a></nav><time datetime="2026-07-11">Verified · 2026.07.11</time></div></footer>
+    <footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><strong>Jason Xun</strong><p>Product systems, AI orchestration, full-stack delivery.</p></div><nav aria-label="页脚导航"><a href="/">Home</a><a href="/work/">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a></nav><time datetime="2026-07-11">Page reviewed · 2026.07.11</time></div></footer>
   </body>
 </html>

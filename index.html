@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="/assets/jx/tokens.css" />
     <link rel="stylesheet" href="/assets/jx/base.css" />
     <link rel="stylesheet" href="/assets/jx/components.css" />
-    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260711-3" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -40,10 +40,24 @@
             "@type": "Person",
             "@id": "https://estelledc.github.io/#person",
             "name": "Jason Xun",
+            "alternateName": "estelledc",
             "url": "https://estelledc.github.io/",
             "jobTitle": "Product Systems Builder",
             "sameAs": ["https://github.com/estelledc"],
             "knowsAbout": ["Product Engineering", "AI Orchestration", "Full-stack Development", "iOS Development", "Evaluation Systems"]
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://estelledc.github.io/#profile-page",
+            "url": "https://estelledc.github.io/",
+            "dateModified": "2026-07-11",
+            "mainEntity": { "@id": "https://estelledc.github.io/#person" },
+            "hasPart": [
+              { "@type": "CreativeWork", "name": "全智评", "url": "https://estelledc.github.io/work/quanzhiping/" },
+              { "@type": "CreativeWork", "name": "BJ-Pal", "url": "https://estelledc.github.io/work/bj-pal/" },
+              { "@type": "CreativeWork", "name": "UIKit Lifecycle Lab", "url": "https://estelledc.github.io/UIKitLifecycleDemo/" },
+              { "@type": "CreativeWork", "name": "HardwareDecoder", "url": "https://estelledc.github.io/HardwareDecoder/" }
+            ]
           },
           {
             "@type": "WebSite",
@@ -89,55 +103,53 @@
     <main id="main">
       <section class="hero shell" aria-labelledby="hero-title">
         <div>
-          <p class="eyebrow">Product Systems Builder · 2026</p>
+          <p class="eyebrow">Jason Xun · Product Systems Builder</p>
+          <p class="hero-scope" lang="en">AI workflows · Web products · iOS · Systems learning</p>
           <h1 class="display-title" id="hero-title">把模糊需求，做成能被验证的产品系统。</h1>
           <p class="lede">
-            我从真实用户要完成的任务出发，把产品判断、AI 协作、全栈工程和验证机制接成一条可交付的闭环。
+            我负责把需求收敛、界面、数据流、AI 编排、部署和验收接成一条能运行、能解释、能继续迭代的产品链路。
           </p>
           <p class="english-summary" lang="en">
-            I turn ambiguous product problems into working, inspectable systems—connecting product judgment, AI orchestration, full-stack delivery, and evidence-led iteration.
+            I turn ambiguous product work into inspectable systems, from product framing and interface decisions to AI orchestration, delivery, and verification.
           </p>
           <div class="actions">
             <a class="button" href="/work/">查看代表案例</a>
             <a class="button-secondary" href="/resume/">Web résumé</a>
           </div>
         </div>
-        <aside class="hero-note" aria-label="能力摘要">
-          <p class="hero-note__label">System signal / 01</p>
-          <dl>
-            <div>
-              <dt>Start with</dt>
-              <dd>用户要完成的真实任务，而不是功能清单。</dd>
-            </div>
-            <div>
-              <dt>Build with</dt>
-              <dd>AI 编排、Web / iOS 工程与可追踪的数据流。</dd>
-            </div>
-            <div>
-              <dt>Finish when</dt>
-              <dd>结果可复核，边界可解释，下一轮改进有证据。</dd>
-            </div>
-          </dl>
+        <aside class="hero-proof" aria-label="可核验的代表证据">
+          <p class="hero-proof__label">Comparable evidence / 04</p>
+          <div class="hero-proof__list">
+            <a href="/work/quanzhiping/" data-evidence-key="quanzhiping-shipped">
+              <span>Outcome · Web product</span><strong>Shipped</strong><small>全智评已有公开产品表面</small>
+            </a>
+            <a href="https://github.com/estelledc/bj-pal/blob/main/docs/eval-100-results.md" data-evidence-key="bj-pal-final-pass">
+              <span>Observed · Agent eval</span><strong>47 / 100</strong><small>限定场景评测，不外推真实用户效果</small>
+            </a>
+            <a href="https://github.com/estelledc/UIKitLifecycleDemo/blob/main/UIKitLifecycleDemoUITests/UIKitLifecycleDemoUITests.swift" data-evidence-key="uikit-ui-tests">
+              <span>Verified · iOS lab</span><strong>2 / 2</strong><small>iPhone Simulator UI Test</small>
+            </a>
+            <a href="https://github.com/estelledc/HardwareDecoder/tree/main/Tests/HardwareDecoderCoreTests" data-evidence-key="hardwaredecoder-xctest">
+              <span>Verified · Swift system</span><strong>12 / 12</strong><small>XCTest + 真实 H.264 fixture</small>
+            </a>
+          </div>
+          <p class="jx-verification-line">Evidence reviewed · 2026-07-11 · 数字直达案例、测试源码或评测记录</p>
         </aside>
       </section>
 
-      <section class="shell" aria-label="核心能力">
+      <section class="shell" aria-label="工作原则">
         <div class="proof-strip">
           <article>
-            <span>01 / Product</span>
-            <strong>从问题与用户任务定义系统边界</strong>
+            <span>01 / Systems</span>
+            <strong>Systems over isolated screens.</strong>
           </article>
           <article>
-            <span>02 / AI</span>
-            <strong>把模型放进可复核的工作流</strong>
+            <span>02 / Evidence</span>
+            <strong>Evidence over adjectives.</strong>
           </article>
           <article>
-            <span>03 / Build</span>
-            <strong>跨 Web、后端与 iOS 完成交付</strong>
-          </article>
-          <article>
-            <span>04 / Evidence</span>
-            <strong>用测试、评测和公开工件做验收</strong>
+            <span>03 / Explainability</span>
+            <strong>Explainability over hidden magic.</strong>
           </article>
         </div>
       </section>
@@ -146,10 +158,10 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Selected work</p>
-            <h2 id="selected-work">不是项目清单，是两种产品系统能力。</h2>
+            <h2 id="selected-work">四件作品，四种可比经验。</h2>
           </div>
           <p>
-            一个面向真实教学工作流，一个面向复杂群体决策。案例页同时写清角色、证据与尚未解决的边界。
+            从已上线工作流、Agent 决策，到 iOS 生命周期与视频解码。每一项都把本人角色、证据来源和未验证边界放在同一屏。
           </p>
         </div>
         <div class="project-grid">
@@ -160,6 +172,8 @@
                 alt="全智评教师端、学生端与管理端登录界面"
                 width="1440"
                 height="1100"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="project-card__body">
@@ -184,9 +198,37 @@
               <span class="project-card__arrow" aria-hidden="true">↗</span>
             </div>
           </a>
+          <a class="project-card project-card--wide" href="https://estelledc.github.io/UIKitLifecycleDemo/">
+            <div class="project-card__visual project-card__visual--uikit" aria-hidden="true">
+              <div class="uikit-trace">
+                <span>01 · viewDidLoad</span><span>02 · delegate</span><span>03 · target-action</span><span>04 · closure</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div>
+                <span class="status-chip" data-status="maintained">Verified lab</span>
+                <h3>UIKit Lifecycle Lab</h3>
+                <p>让一次 Save 操作点亮 UIKit 隐式调用、delegate、target-action 与 closure 轨迹。</p>
+              </div>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="project-card project-card--narrow" href="https://estelledc.github.io/HardwareDecoder/">
+            <div class="project-card__visual project-card__visual--decoder" aria-hidden="true">
+              <div class="decoder-trace"><span>$ probe fixture.h264</span><strong>852×480 · IDR 20</strong><span>$ decode --frames 6 ✓</span></div>
+            </div>
+            <div class="project-card__body">
+              <div>
+                <span class="status-chip" data-status="maintained">Verified lab</span>
+                <h3>HardwareDecoder</h3>
+                <p>从 Annex-B NAL 到 VideoToolbox 帧输出，用真实 fixture 和 XCTest 让解码管线可复核。</p>
+              </div>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
         </div>
         <div class="actions">
-          <a class="text-action" href="/work/">浏览全部 6 个案例</a>
+          <a class="text-action" href="/work/">浏览全部案例与公开站点</a>
         </div>
       </section>
 
