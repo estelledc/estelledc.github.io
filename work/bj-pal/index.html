@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f3" />
+    <meta name="description" content="BJ-Pal 案例：用偏好镜子、Plan-and-Execute、风险探测、群体收敛和主动改线处理周末活动决策。" />
+    <title>BJ-Pal 案例｜Jason Xun</title>
+    <link rel="canonical" href="https://estelledc.github.io/work/bj-pal/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="Jason Xun" />
+    <meta property="og:title" content="BJ-Pal 案例｜周六下午的决策解药" />
+    <meta property="og:description" content="一个强调偏好解释、风险回退与群体收敛的活动规划 Agent 原型。" />
+    <meta property="og:url" content="https://estelledc.github.io/work/bj-pal/" />
+    <meta property="og:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
+    <meta property="og:image:alt" content="Jason Xun，Product Systems Builder 分享卡片" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BJ-Pal 案例｜Jason Xun" />
+    <meta name="twitter:description" content="把一句模糊需求变成有风险回退和群体收敛的活动方案。" />
+    <meta name="twitter:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/jx/tokens.css" />
+    <link rel="stylesheet" href="/assets/jx/base.css" />
+    <link rel="stylesheet" href="/assets/jx/components.css" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "BJ-Pal",
+        "description": "A prototype activity-planning agent with preference reflection, risk detection, group convergence, and replanning.",
+        "url": "https://estelledc.github.io/work/bj-pal/",
+        "codeRepository": "https://github.com/estelledc/bj-pal",
+        "programmingLanguage": "Python",
+        "inLanguage": ["zh-CN", "en"],
+        "author": [
+          { "@type": "Person", "name": "Jason Xun", "url": "https://estelledc.github.io/" },
+          { "@type": "Person", "name": "KeepL" }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header" aria-label="主导航"><div class="site-header__inner"><a class="brand" href="/" aria-label="Jason Xun 首页"><span class="brand-mark" aria-hidden="true">X</span><span class="brand-copy"><strong>Jason Xun</strong><small>Product Systems Builder</small></span></a><nav class="site-nav" aria-label="桌面导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav><details class="nav-menu"><summary>Menu</summary><nav class="mobile-nav" aria-label="移动导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav></details></div></header>
+
+    <main id="main">
+      <article>
+        <header class="case-hero shell">
+          <div>
+            <div class="case-kicker"><span class="status-chip" data-status="prototype">Prototype · 原型验证</span><span class="eyebrow">Case 02 / Agent product</span></div>
+            <h1 class="case-title">BJ-Pal</h1>
+            <p class="case-subtitle">不只给路线，而是显式展示偏好、风险与备选，让 AI 承担复杂决策中的信息组织工作。</p>
+            <p class="english-summary" lang="en">A hackathon prototype that turns an ambiguous group outing request into an inspectable plan with preference reflection, risk checks, and replanning.</p>
+            <div class="actions"><a class="button" href="https://github.com/estelledc/bj-pal" target="_blank" rel="noopener">查看公开源码 ↗</a><a class="button-secondary" href="https://github.com/estelledc/bj-pal/tree/main/promo" target="_blank" rel="noopener">路演物料 ↗</a></div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Role</dt><dd>Jason：项目负责人、产品 / Agent / 评测设计；KeepL：共同作者</dd></div>
+            <div><dt>Stage</dt><dd>黑客松原型 · 非生产服务</dd></div>
+            <div><dt>Core loop</dt><dd>意图 → 候选 → 风险 → 群体收敛 → 改线</dd></div>
+            <div><dt>Public check</dt><dd>2026.07 · 源码与设计材料公开</dd></div>
+          </dl>
+        </header>
+
+        <div class="case-media case-media--bjpal" aria-label="BJ-Pal 视觉标识"><span class="project-card__monogram">BJ<em>·</em>Pal</span></div>
+
+        <div class="case-content shell">
+          <aside class="case-toc" aria-label="案例目录"><p>On this case</p><nav><a href="#problem">问题</a><a href="#system">系统</a><a href="#decisions">关键取舍</a><a href="#evidence">证据</a><a href="#limits">边界</a></nav></aside>
+          <div class="case-story">
+            <section class="case-section" id="problem">
+              <h2>路线规划容易，替一群人减少决策摩擦很难。</h2>
+              <p>“周六下午找个地方聚一聚”包含了地点、时间、交通、排队、预算和成员偏好的组合约束。真正让人疲惫的不是少一个景点列表，而是没人愿意为“选错”负责。</p>
+              <p>BJ-Pal 因此把产品目标放在决策透明度：先照出偏好，再展示每一步选择依据；发现闭店、排队或群体冲突时，系统需要解释为什么改线。</p>
+            </section>
+
+            <section class="case-section" id="system">
+              <h2>从一句话到可追踪方案的 Plan-and-Execute 管线。</h2>
+              <ol>
+                <li>文本或多模态输入提取时间、区域、同行者和偏好缺口。</li>
+                <li>Planner 生成候选活动序列，并记录决策、置信度与回退项。</li>
+                <li>地点、路线、UGC 软信号和可用性探测共同参与排序。</li>
+                <li>群体模式用偏好收敛与投票处理成员之间的冲突。</li>
+                <li>触发风险后，Replanner 在同区域同类型候选中替换失败步骤。</li>
+              </ol>
+              <ul class="stack-list" aria-label="技术栈"><li>Python</li><li>Plan-and-Execute</li><li>Streamlit</li><li>folium</li><li>SQLite</li><li>OR-Tools</li><li>OpenTelemetry</li></ul>
+            </section>
+
+            <section class="case-section" id="decisions">
+              <h2>把“智能”变成用户能看懂的选择过程。</h2>
+              <h3>偏好镜子先于方案</h3>
+              <p>系统先把用户说过与没说清的条件返还给用户，再生成路线；这比直接给结果更容易发现需求误读。</p>
+              <h3>风险探测先于漂亮行程</h3>
+              <p>地点高分不等于当下可用。可用性探测把排队、闭店、预约和 UGC 负面信号放到执行之前，并保留主动改线入口。</p>
+              <h3>群体偏好不是简单平均</h3>
+              <p>原型分别处理沉默、反复变化和隐性领导等群体模式；投票与 Pareto 比较用于暴露取舍，而不是伪装出唯一最优答案。</p>
+            </section>
+
+            <section class="case-section" id="evidence">
+              <h2>公开可检查的证据。</h2>
+              <ul class="evidence-list">
+                <li><strong>源码与 README</strong><span>公开架构、运行方式、测试分层与已完成里程碑。</span><a href="https://github.com/estelledc/bj-pal" target="_blank" rel="noopener">Review ↗</a></li>
+                <li><strong>产品设计</strong><span>仓库文档记录两页架构、异常处理和产品路线。</span><a href="https://github.com/estelledc/bj-pal/blob/main/docs/DESIGN.md" target="_blank" rel="noopener">Read ↗</a></li>
+                <li><strong>评测框架</strong><span>L1 / L2 / L3 分层行为评测与信号检查，而不只看单次 demo。</span><a href="https://github.com/estelledc/bj-pal/blob/main/docs/EVAL_FRAMEWORK.md" target="_blank" rel="noopener">Inspect ↗</a></li>
+                <li><strong>路演物料</strong><span>Landing page、one-pager、pitch deck 与架构说明均在仓库内公开。</span><a href="https://github.com/estelledc/bj-pal/tree/main/promo" target="_blank" rel="noopener">Browse ↗</a></li>
+              </ul>
+            </section>
+
+            <section class="case-section" id="limits">
+              <h2>边界与下一步。</h2>
+              <div class="case-callout"><strong>Prototype boundary</strong><p>这是黑客松原型，不是生产级预订服务。仓库中的餐厅预订与消息发送是 mock；所谓“用户访谈”是 AI 模拟研究，不能替代真实用户研究或付费验证。</p></div>
+              <p>团队署名为 Jason 与 KeepL；本案例聚焦 Jason 对外承担的项目负责人工作，不把全部团队产出归为个人完成。Claude Code 是协作工具。</p>
+              <p>当前公开证据能够支持架构、数据管线、行为评测与交互方案；真实地点可用性、第三方交易闭环、长期留存和多人真实使用仍需在生产环境中验证。</p>
+            </section>
+          </div>
+        </div>
+      </article>
+
+      <a class="next-case shell" href="/work/study/"><div><small>Next case · 03 / 06</small><strong>Study · 工程判断力学习地图</strong></div><span aria-hidden="true">→</span></a>
+    </main>
+    <footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><strong>Jason Xun</strong><p>Product systems, AI orchestration, full-stack delivery.</p></div><nav aria-label="页脚导航"><a href="/">Home</a><a href="/work/">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a></nav><time datetime="2026-07-11">Verified · 2026.07.11</time></div></footer>
+  </body>
+</html>

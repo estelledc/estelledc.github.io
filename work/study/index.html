@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f3" />
+    <meta name="description" content="Study 案例：把开源项目与经典论文放进同一张工程判断力学习地图，并用主题路径、质量门禁与公开状态管理大规模内容。" />
+    <title>Study 案例｜Jason Xun</title>
+    <link rel="canonical" href="https://estelledc.github.io/work/study/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="Jason Xun" />
+    <meta property="og:title" content="Study 案例｜工程判断力学习地图" />
+    <meta property="og:description" content="先选一个真实问题，再把开源实现与经典思想放在同一条学习路径里读。" />
+    <meta property="og:url" content="https://estelledc.github.io/work/study/" />
+    <meta property="og:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
+    <meta property="og:image:alt" content="Jason Xun，Product Systems Builder 分享卡片" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Study 案例｜Jason Xun" />
+    <meta name="twitter:description" content="开源项目与论文共用一张工程判断力学习地图。" />
+    <meta name="twitter:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/jx/tokens.css" />
+    <link rel="stylesheet" href="/assets/jx/base.css" />
+    <link rel="stylesheet" href="/assets/jx/components.css" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Jason's Study",
+        "description": "A public learning map that connects open-source projects and classic papers through problem-oriented paths.",
+        "url": "https://estelledc.github.io/work/study/",
+        "sameAs": ["https://estelledc.github.io/study/", "https://github.com/estelledc/study"],
+        "inLanguage": ["zh-CN", "en"],
+        "author": { "@type": "Person", "name": "Jason Xun", "url": "https://estelledc.github.io/" }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header" aria-label="主导航"><div class="site-header__inner"><a class="brand" href="/" aria-label="Jason Xun 首页"><span class="brand-mark" aria-hidden="true">X</span><span class="brand-copy"><strong>Jason Xun</strong><small>Product Systems Builder</small></span></a><nav class="site-nav" aria-label="桌面导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav><details class="nav-menu"><summary>Menu</summary><nav class="mobile-nav" aria-label="移动导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav></details></div></header>
+
+    <main id="main">
+      <article>
+        <header class="case-hero shell">
+          <div>
+            <div class="case-kicker"><span class="status-chip" data-status="maintained">Maintained · 持续维护</span><span class="eyebrow">Case 03 / Learning infrastructure</span></div>
+            <h1 class="case-title">Study</h1>
+            <p class="case-subtitle">先选一个问题，再把开源项目与经典论文放在同一条路径里读，建立可以迁移的工程判断力。</p>
+            <p class="english-summary" lang="en">A public learning system that organizes open-source implementations and classic papers around real engineering questions, not content categories.</p>
+            <div class="actions"><a class="button" href="https://estelledc.github.io/study/" target="_blank" rel="noopener">打开学习站 ↗</a><a class="button-secondary" href="https://github.com/estelledc/study" target="_blank" rel="noopener">GitHub ↗</a></div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Role</dt><dd>作者 · 信息架构与内容系统设计</dd></div>
+            <div><dt>Audience</dt><dd>希望建立工程判断力的零基础学习者</dd></div>
+            <div><dt>Core loop</dt><dd>问题 → 路径 → 项目 / 论文 → 最小验证</dd></div>
+            <div><dt>Public check</dt><dd>2026.07 · 站点与源码持续更新</dd></div>
+          </dl>
+        </header>
+
+        <div class="case-media case-media--study" aria-label="Study 主题视觉">
+          <div class="study-visual"><strong>19</strong><div><p>Topic clusters</p><p>Projects × Papers</p><p>Question-led learning paths</p></div></div>
+        </div>
+
+        <div class="case-content shell">
+          <aside class="case-toc" aria-label="案例目录"><p>On this case</p><nav><a href="#problem">问题</a><a href="#system">系统</a><a href="#decisions">关键取舍</a><a href="#evidence">证据</a><a href="#limits">边界</a></nav></aside>
+          <div class="case-story">
+            <section class="case-section" id="problem">
+              <h2>内容越多，越需要回答“为什么从这里开始”。</h2>
+              <p>单独按“项目”和“论文”分类，容易把学习者分流到两个互不相干的收藏夹。真实学习却总是从问题开始：状态为什么难管理、Agent 为什么会失控、分布式系统为什么不能假设全局时钟。</p>
+              <p>Study 的产品任务因此不是继续增加目录，而是把项目里的工程实现与论文里的思想源头放到同一条可进入、可继续、可验证的路线中。</p>
+            </section>
+
+            <section class="case-section" id="system">
+              <h2>内容仓库背后是一条持续生成、审查与发布的管线。</h2>
+              <ol>
+                <li>候选项目与论文进入独立队列，按主题和前置知识归类。</li>
+                <li>项目研究与论文研究分别使用结构化方法，要求落到源码、实验或可复现的最小验证。</li>
+                <li>构建脚本重新生成 Atlas、主题路径与内容计数，避免手写索引漂移。</li>
+                <li>链接、Wiki 歧义、计数与产品信息架构审计共同构成发布门禁。</li>
+                <li>Astro + Starlight 构建后由 GitHub Pages 发布。</li>
+              </ol>
+              <ul class="stack-list" aria-label="技术栈"><li>Astro</li><li>Starlight</li><li>Markdown</li><li>Node.js</li><li>GitHub Actions</li><li>GitHub Pages</li></ul>
+            </section>
+
+            <section class="case-section" id="decisions">
+              <h2>把规模从卖点降为基础设施问题。</h2>
+              <h3>首页先给路径，不给全量目录</h3>
+              <p>前端、AI Agent 与系统底层三条新手路线先提供前三篇，主题页再展开分支；全量 Atlas 只服务知道自己要找什么的读者。</p>
+              <h3>项目和论文混排</h3>
+              <p>一条路径内可以先读 React 实现，再读状态或调度相关思想。分类仍保留，但不再决定用户从哪里开始。</p>
+              <h3>内容质量必须有可执行门禁</h3>
+              <p>计数、链接和索引由脚本生成与审计；“每篇都很深入”不能仅靠文案保证，因此案例公开说明 AI 协作与深度差异。</p>
+            </section>
+
+            <section class="case-section" id="evidence">
+              <h2>公开可检查的证据。</h2>
+              <ul class="evidence-list">
+                <li><strong>线上学习站</strong><span>首页以问题与新手路径组织项目、论文和主题入口。</span><a href="https://estelledc.github.io/study/" target="_blank" rel="noopener">Visit ↗</a></li>
+                <li><strong>公开源码</strong><span>内容、构建脚本、审计命令与发布配置均可查看。</span><a href="https://github.com/estelledc/study" target="_blank" rel="noopener">Review ↗</a></li>
+                <li><strong>开始页</strong><span>为不同背景的读者提供入口与前置建议。</span><a href="https://estelledc.github.io/study/start/" target="_blank" rel="noopener">Start ↗</a></li>
+                <li><strong>主题地图</strong><span>公开站当前按 19 个主题簇组织项目与论文。</span><a href="https://estelledc.github.io/study/topics/" target="_blank" rel="noopener">Explore ↗</a></li>
+              </ul>
+            </section>
+
+            <section class="case-section" id="limits">
+              <h2>边界与可信度说明。</h2>
+              <div class="case-callout"><strong>Content boundary</strong><p>内容由 Jason 与 AI 协作生成和重组。公开数量代表覆盖面，不代表每篇都经过同等强度的源码运行、论文逐页核验或人工编辑。</p></div>
+              <p>旧状态文件仍记录项目线与论文线早期的 20 / 20 里程碑，而当前站点已扩展为更大规模的主题地图。案例以线上首页和当前构建结果为准，历史文档只作为演化证据。</p>
+            </section>
+          </div>
+        </div>
+      </article>
+
+      <a class="next-case shell" href="/work/zero-to-ai/"><div><small>Next case · 04 / 06</small><strong>Zero to AI · 零基础 AI 编程教程</strong></div><span aria-hidden="true">→</span></a>
+    </main>
+    <footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><strong>Jason Xun</strong><p>Product systems, AI orchestration, full-stack delivery.</p></div><nav aria-label="页脚导航"><a href="/">Home</a><a href="/work/">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a></nav><time datetime="2026-07-11">Verified · 2026.07.11</time></div></footer>
+  </body>
+</html>

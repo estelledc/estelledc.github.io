@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f3" />
+    <meta name="description" content="Embodied AI: Zero to One 案例：把 22 章教程与 156 篇论文笔记重组为路径、主题、对比、图谱和个人进度工具。" />
+    <title>Embodied AI 案例｜Jason Xun</title>
+    <link rel="canonical" href="https://estelledc.github.io/work/embodied-ai/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="Jason Xun" />
+    <meta property="og:title" content="Embodied AI 案例｜从论文全景到可进入的学习系统" />
+    <meta property="og:description" content="22 章教程、156 篇论文笔记与一组面向零基础读者的导航和可视化工具。" />
+    <meta property="og:url" content="https://estelledc.github.io/work/embodied-ai/" />
+    <meta property="og:image" content="https://estelledc.github.io/assets/media/embodied-ai-hero.webp" />
+    <meta property="og:image:alt" content="抽象机械手、视觉与数据元素构成的具身智能插画" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Embodied AI 案例｜Jason Xun" />
+    <meta name="twitter:description" content="把论文全景变成零基础读者可以进入、比较和持续学习的系统。" />
+    <meta name="twitter:image" content="https://estelledc.github.io/assets/media/embodied-ai-hero.webp" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/jx/tokens.css" />
+    <link rel="stylesheet" href="/assets/jx/base.css" />
+    <link rel="stylesheet" href="/assets/jx/components.css" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Embodied AI: Zero to One",
+        "description": "A beginner-oriented embodied AI learning system with tutorials, paper notes, thematic paths, comparisons, and visual maps.",
+        "url": "https://estelledc.github.io/work/embodied-ai/",
+        "image": "https://estelledc.github.io/assets/media/embodied-ai-hero.webp",
+        "sameAs": ["https://estelledc.github.io/embodied-ai-reading-station/", "https://github.com/estelledc/embodied-ai-reading-station"],
+        "educationalLevel": "Beginner to intermediate",
+        "inLanguage": ["zh-CN", "en"],
+        "author": { "@type": "Person", "name": "Jason Xun", "url": "https://estelledc.github.io/" }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header" aria-label="主导航"><div class="site-header__inner"><a class="brand" href="/" aria-label="Jason Xun 首页"><span class="brand-mark" aria-hidden="true">X</span><span class="brand-copy"><strong>Jason Xun</strong><small>Product Systems Builder</small></span></a><nav class="site-nav" aria-label="桌面导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav><details class="nav-menu"><summary>Menu</summary><nav class="mobile-nav" aria-label="移动导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav></details></div></header>
+
+    <main id="main">
+      <article>
+        <header class="case-hero shell">
+          <div>
+            <div class="case-kicker"><span class="status-chip" data-status="maintained">Maintained · v1.2</span><span class="eyebrow">Case 05 / Research learning product</span></div>
+            <h1 class="case-title">Embodied AI</h1>
+            <p class="case-subtitle">从零术语假设出发，把论文集合变成有教程、有路线、有对比工具，也诚实标注核验深度的学习系统。</p>
+            <p class="english-summary" lang="en">A beginner-oriented embodied AI learning product that combines 22 tutorial chapters, 156 structured paper notes, and tools for paths, comparison, and progress.</p>
+            <div class="actions"><a class="button" href="https://estelledc.github.io/embodied-ai-reading-station/" target="_blank" rel="noopener">打开学习站 ↗</a><a class="button-secondary" href="https://github.com/estelledc/embodied-ai-reading-station" target="_blank" rel="noopener">GitHub ↗</a></div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Role</dt><dd>作者 · 学习产品与静态构建系统设计</dd></div>
+            <div><dt>Coverage</dt><dd>22 章教程 · 156 篇结构化论文笔记</dd></div>
+            <div><dt>Core loop</dt><dd>目标 → 路径 → 论文 → 对比 → 进度</dd></div>
+            <div><dt>Public check</dt><dd>2026.07 · v1.2 站点持续维护</dd></div>
+          </dl>
+        </header>
+
+        <figure class="case-media"><img src="/assets/media/embodied-ai-hero.webp" alt="机械手伸向视觉与数据元素的具身智能主题插画" width="1672" height="941" /></figure>
+
+        <div class="case-content shell">
+          <aside class="case-toc" aria-label="案例目录"><p>On this case</p><nav><a href="#problem">问题</a><a href="#system">系统</a><a href="#decisions">关键取舍</a><a href="#evidence">证据</a><a href="#limits">边界</a></nav></aside>
+          <div class="case-story">
+            <section class="case-section" id="problem">
+              <h2>156 篇论文不是入口，最多只是库存。</h2>
+              <p>具身智能横跨视觉、语言、控制、世界模型、数据集、仿真、射频和听觉。把论文按时间堆在一起，会让零基础读者在术语出现之前就失去方向。</p>
+              <p>产品要解决的是“接下来读什么、为什么读、读完如何比较”：先用 22 章教程建立直觉，再按任务、30 天核心路线或主题三连进入论文。</p>
+            </section>
+
+            <section class="case-section" id="system">
+              <h2>一个由内容、数据 API 与全前端状态组成的静态产品。</h2>
+              <ol>
+                <li>Markdown 笔记与解析材料进入构建脚本，生成统一的论文对象。</li>
+                <li>标签、主题、时代和 venue 被聚合为索引、对比表、时间线、图谱与热力图。</li>
+                <li>教程、30+5 学习路径、主题三连和阅读包提供不同进入方式。</li>
+                <li>localStorage 记录已读、连续阅读、路径进度和下一篇推荐，并支持版本化导入导出。</li>
+                <li>构建后输出页面、Pagefind 搜索、JSON 数据 API、feed、sitemap 与 PWA 资源。</li>
+              </ol>
+              <ul class="stack-list" aria-label="技术栈"><li>Node.js</li><li>marked</li><li>gray-matter</li><li>Pagefind</li><li>KaTeX</li><li>D3.js</li><li>localStorage</li><li>GitHub Pages</li></ul>
+            </section>
+
+            <section class="case-section" id="decisions">
+              <h2>让内容产品既有规模，也有诚实的可信度边界。</h2>
+              <h3>从生活类比开始，但不止于类比</h3>
+              <p>术语第一次出现必须有定义与日常直觉，公式后要有人话解释；同时保留原论文信息、实验解读与思考题，方便读者回到一手材料。</p>
+              <h3>同一内容提供多种阅读视图</h3>
+              <p>Timeline 回答“怎么演化”，Compare 回答“同主题方法怎么不同”，Graph 和 Heatmap 回答“哪些概念经常一起出现”。</p>
+              <h3>个人进度留在用户设备</h3>
+              <p>阅读状态和推荐逻辑完全在前端运行，不需要登录或上传学习数据；导入导出让用户保留控制权。</p>
+            </section>
+
+            <section class="case-section" id="evidence">
+              <h2>公开可检查的证据。</h2>
+              <ul class="evidence-list">
+                <li><strong>线上学习站</strong><span>教程、论文、路径、对比、图谱和进度工具均可直接使用。</span><a href="https://estelledc.github.io/embodied-ai-reading-station/" target="_blank" rel="noopener">Visit ↗</a></li>
+                <li><strong>公开源码</strong><span>笔记、构建脚本、产品前端与发布门禁均在仓库中。</span><a href="https://github.com/estelledc/embodied-ai-reading-station" target="_blank" rel="noopener">Review ↗</a></li>
+                <li><strong>30+5 路径</strong><span>30 天核心学习与 5 天任务扩展，明确复习和输出日。</span><a href="https://estelledc.github.io/embodied-ai-reading-station/learn/path/" target="_blank" rel="noopener">Explore ↗</a></li>
+                <li><strong>公开数据 API</strong><span>论文、标签、主题和 manifest 可作为 JSON 获取。</span><a href="https://estelledc.github.io/embodied-ai-reading-station/data/index.json" target="_blank" rel="noopener">Inspect ↗</a></li>
+              </ul>
+            </section>
+
+            <section class="case-section" id="limits">
+              <h2>内容状态与质量边界。</h2>
+              <div class="case-callout"><strong>Research boundary</strong><p>156 篇笔记的 deep-read 状态表示满足结构与最低内容门禁，不等于作者已逐页人工复核每篇论文。内容由 AI 辅助整理，关键事实、数字和结论仍应回到原论文核验。</p></div>
+              <p>当前仓库说明中，46 篇保留本地解析文本与 SHA-256 清单，110 篇引用 HTTPS 原文页面。两种来源路径的可追溯强度不同，站点不再用统一“深读”标签掩盖差异。</p>
+            </section>
+          </div>
+        </div>
+      </article>
+
+      <a class="next-case shell" href="/work/xiaochai/"><div><small>Next case · 06 / 06</small><strong>小柴 · 完全本地的 iOS 每日纸条</strong></div><span aria-hidden="true">→</span></a>
+    </main>
+    <footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><strong>Jason Xun</strong><p>Product systems, AI orchestration, full-stack delivery.</p></div><nav aria-label="页脚导航"><a href="/">Home</a><a href="/work/">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a></nav><time datetime="2026-07-11">Verified · 2026.07.11</time></div></footer>
+  </body>
+</html>
