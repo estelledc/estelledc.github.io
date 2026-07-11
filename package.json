@@ -1,0 +1,14 @@
+{
+  "name": "jason-xun-showcase",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Static GitHub Pages portfolio for Jason Xun",
+  "type": "module",
+  "scripts": {
+    "build": "npm run check",
+    "check": "node scripts/validate-site.mjs",
+    "check:live": "node scripts/probe-public-sites.mjs",
+    "test": "node scripts/validate-site.mjs",
+    "serve": "python3 -m http.server 4173"
+  }
+}

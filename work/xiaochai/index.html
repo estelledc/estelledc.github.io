@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f3" />
+    <meta name="description" content="小柴案例：完全本地运行的每日中文纸条与涂鸦 iOS 原型，包含 UIKit 主应用、WidgetKit 小组件、分享图片和隐私门禁。" />
+    <title>小柴 iOS 案例｜Jason Xun</title>
+    <link rel="canonical" href="https://estelledc.github.io/work/xiaochai/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="Jason Xun" />
+    <meta property="og:title" content="小柴案例｜完全本地的每日中文纸条" />
+    <meta property="og:description" content="UIKit 主应用、WidgetKit 小组件、涂鸦与分享图片组成的本地优先 iOS 原型。" />
+    <meta property="og:url" content="https://estelledc.github.io/work/xiaochai/" />
+    <meta property="og:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
+    <meta property="og:image:alt" content="Jason Xun，Product Systems Builder 分享卡片" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="小柴 iOS 案例｜Jason Xun" />
+    <meta name="twitter:description" content="完全本地运行的每日中文纸条、涂鸦与 Widget 原型。" />
+    <meta name="twitter:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/jx/tokens.css" />
+    <link rel="stylesheet" href="/assets/jx/base.css" />
+    <link rel="stylesheet" href="/assets/jx/components.css" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260711-3" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "小柴",
+        "description": "A private-source, local-first iOS prototype for a daily Chinese note, drawing, sharing, and widgets.",
+        "url": "https://estelledc.github.io/work/xiaochai/",
+        "image": "https://estelledc.github.io/assets/media/xiaochai-app.png",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS",
+        "softwareVersion": "0.0.2",
+        "inLanguage": ["zh-CN", "en"],
+        "author": { "@type": "Person", "@id": "https://estelledc.github.io/#person", "name": "Jason Xun", "url": "https://estelledc.github.io/" }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header" aria-label="主导航"><div class="site-header__inner"><a class="brand" href="/" aria-label="Jason Xun 首页"><span class="brand-mark" aria-hidden="true">X</span><span class="brand-copy"><strong>Jason Xun</strong><small>Product Systems Builder</small></span></a><nav class="site-nav" aria-label="桌面导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav><details class="nav-menu"><summary>Menu</summary><nav class="mobile-nav" aria-label="移动导航"><a href="/work/" aria-current="page">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a><a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a></nav></details></div></header>
+
+    <main id="main">
+      <article>
+        <header class="case-hero shell">
+          <div>
+            <div class="case-kicker"><span class="status-chip" data-status="private">Prototype · Private source</span><span class="eyebrow">Case 06 / On-device iOS</span></div>
+            <h1 class="case-title">小柴。</h1>
+            <p class="case-subtitle">每天一张中文小纸条，可以随手画一笔、生成分享图，也能在主屏幕 Widget 上安静出现。</p>
+            <p class="english-summary" lang="en">A private-source, local-first iOS prototype for one daily Chinese note, lightweight drawing, shareable cards, and home-screen widgets.</p>
+            <div class="actions"><a class="button" href="/work/">返回全部案例</a><a class="button-secondary" href="https://github.com/estelledc/UIKitLifecycleDemo" target="_blank" rel="noopener">查看公开 iOS 学习工件 ↗</a></div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Role</dt><dd>独立 iOS 开发者 · 产品与工程实现</dd></div>
+            <div><dt>Stage</dt><dd>v0.0.2 · 本地验证原型 · 源码私有</dd></div>
+            <div><dt>Core loop</dt><dd>每日纸条 → 涂鸦 → 分享 / Widget</dd></div>
+            <div><dt>Privacy</dt><dd>无登录 · 无云 · 无追踪 · 无第三方依赖</dd></div>
+          </dl>
+        </header>
+
+        <aside class="jx-case-question shell" aria-label="本案例回答的经验问题">
+          <p class="jx-case-question__label">This case answers</p>
+          <div><strong class="jx-case-question__prompt">说说你如何设计一个每天只出现一张纸条的产品，而不把它变成需要账号、云端和无限 Feed 的另一个内容应用。</strong><p class="jx-case-question__context">产品边界是设计本身：本地资源决定每日纸条，涂鸦、分享和 Widget 都围绕这个有限仪式工作。</p></div>
+        </aside>
+
+        <figure class="case-media case-media--xiaochai"><img src="/assets/media/xiaochai-app.png" alt="小柴 iOS 应用生成分享卡片并打开系统分享面板的模拟器验证截图" width="1206" height="2622" loading="lazy" decoding="async" /></figure>
+
+        <div class="case-content shell">
+          <aside class="case-toc" aria-label="案例目录"><p>On this case</p><nav><a href="#problem">问题</a><a href="#system">系统</a><a href="#decisions">关键取舍</a><a href="#evidence">证据</a><a href="#limits">边界</a></nav></aside>
+          <div class="case-story">
+            <section class="case-section" id="problem">
+              <h2>不是再造一个内容 Feed，而是让一天只出现一张纸条。</h2>
+              <p>小柴把信息量主动压到最低：每天由本地资源决定一张纸条，用户可以读、画、分享，也可以什么都不做。最近 14 天的导航提供回看，但不制造无限下滑。</p>
+              <p>产品的信任前提同样简单：纸条、涂鸦和偏好不需要账户，不上传云端，也不依赖第三方分析服务。</p>
+            </section>
+
+            <section class="case-section" id="system">
+              <h2>UIKit 主应用与 WidgetKit 共用一个确定性的本地模型。</h2>
+              <ol>
+                <li>Bundled JSON 提供纸条内容，本地文件保存用户涂鸦与偏好。</li>
+                <li>UIKit 纯代码布局承载纸条、历史日期、涂鸦、撤销、清空和主题交互。</li>
+                <li>分享渲染器把纸条与涂鸦组合为图片，再交给系统分享面板。</li>
+                <li>WidgetKit 读取 App Group payload；共享容器不可用时显示 bundled deterministic fallback。</li>
+                <li>版本、隐私清单、发布标识、图标、iPhone / iPad 构建与 UI 测试进入统一 Makefile 门禁。</li>
+              </ol>
+              <ul class="stack-list" aria-label="技术栈"><li>Swift</li><li>UIKit</li><li>SwiftUI</li><li>WidgetKit</li><li>XCTest</li><li>Privacy Manifest</li><li>App Group</li></ul>
+            </section>
+
+            <section class="case-section" id="decisions">
+              <h2>隐私不是说明文字，而是架构中没有网络层。</h2>
+              <h3>主 App 使用 UIKit，Widget 使用 SwiftUI</h3>
+              <p>UIKit 负责需要手势、绘制和生命周期控制的主界面；WidgetKit 的 SwiftUI 声明式视图负责系统小组件。两种 UI 技术围绕共享模型协作，而不是强行统一。</p>
+              <h3>共享失败时不悄悄写回普通偏好</h3>
+              <p>App Group suite 不可用时，主应用不会回退到标准 UserDefaults；Widget 只展示可预测的 bundled fallback，避免两个进程看起来同步、实际数据分叉。</p>
+              <h3>发布检查前置</h3>
+              <p>App、Widget 与 Tests 的版本一致性、Privacy Manifest、标识和图标由脚本检查，减少“模拟器能跑但发布配置缺失”的后期返工。</p>
+            </section>
+
+            <section class="case-section" id="evidence">
+              <h2>本案例公开的验证证据。</h2>
+              <ul class="evidence-list">
+                <li><strong>模拟器画面</strong><span>本页截图来自分享链路的模拟器验证，展示主卡片与系统分享面板。</span><span>Visual proof</span></li>
+                <li><strong>构建与测试</strong><span>项目具备 iPhone / iPad clean test、独立 UI test 与无签名 Release build 命令。</span><span>Private logs</span></li>
+                <li><strong>隐私门禁</strong><span>App 与 Widget 各自包含 Privacy Manifest，并声明不追踪、不收集数据。</span><span>Static checks</span></li>
+                <li><strong>学习前置</strong><span>公开的 UIKitLifecycleDemo 记录 UIKit 生命周期、事件路由与测试工作流。</span><a href="https://github.com/estelledc/UIKitLifecycleDemo" target="_blank" rel="noopener">Review ↗</a></li>
+              </ul>
+            </section>
+
+            <section class="case-section" id="limits">
+              <h2>原型边界与分发状态。</h2>
+              <div class="case-callout"><strong>Private-source boundary</strong><p>本案例只发布脱敏截图与工程说明，不公开源码仓库地址、签名信息、设备标识或构建日志。页面不提供下载，也不暗示已经上架。</p></div>
+              <p>当前版本以模拟器和本地设备开发为主，尚未完成 TestFlight / App Store Connect 分发。无签名 CI 可以验证编译与 fallback，但不能替代真实签名后的 App Group 跨进程共享验收。</p>
+            </section>
+          </div>
+        </div>
+      </article>
+
+      <a class="next-case shell" href="/work/quanzhiping/"><div><small>Back to first case · 01 / 06</small><strong>全智评 · 证据优先的实操评价</strong></div><span aria-hidden="true">→</span></a>
+    </main>
+    <footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__brand"><strong>Jason Xun</strong><p>Product systems, AI orchestration, full-stack delivery.</p></div><nav aria-label="页脚导航"><a href="/">Home</a><a href="/work/">Work</a><a href="/about/">About</a><a href="/resume/">Resume</a></nav><time datetime="2026-07-11">Page reviewed · 2026.07.11</time></div></footer>
+  </body>
+</html>

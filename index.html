@@ -3,209 +3,332 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f3" />
     <meta
       name="description"
-      content="Jason Xun，产品系统构建者。把产品判断、AI 协作、全栈工程和验证复盘组织成可交付系统。"
+      content="Jason Xun，产品系统构建者。把产品判断、AI 协作、全栈工程与验证复盘组织成可交付、可解释、可持续迭代的产品系统。"
     />
-    <title>Jason Xun | Product Systems Builder</title>
+    <title>Jason Xun｜Product Systems Builder</title>
+    <link rel="canonical" href="https://estelledc.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="Jason Xun" />
+    <meta property="og:title" content="Jason Xun｜Product Systems Builder" />
+    <meta
+      property="og:description"
+      content="从模糊需求到可运行、可验证的产品系统。"
+    />
+    <meta property="og:url" content="https://estelledc.github.io/" />
+    <meta property="og:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Jason Xun，Product Systems Builder，产品判断、AI 编排与全栈交付" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jason Xun｜Product Systems Builder" />
+    <meta name="twitter:description" content="从模糊需求到可运行、可验证的产品系统。" />
+    <meta name="twitter:image" content="https://estelledc.github.io/assets/media/og-showcase.png" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/assets/jx/tokens.css" />
     <link rel="stylesheet" href="/assets/jx/base.css" />
     <link rel="stylesheet" href="/assets/jx/components.css" />
-    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260711-3" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://estelledc.github.io/#person",
+            "name": "Jason Xun",
+            "alternateName": "estelledc",
+            "url": "https://estelledc.github.io/",
+            "jobTitle": "Product Systems Builder",
+            "sameAs": ["https://github.com/estelledc"],
+            "knowsAbout": ["Product Engineering", "AI Orchestration", "Full-stack Development", "iOS Development", "Evaluation Systems"]
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://estelledc.github.io/#profile-page",
+            "url": "https://estelledc.github.io/",
+            "dateModified": "2026-07-11",
+            "mainEntity": { "@id": "https://estelledc.github.io/#person" },
+            "hasPart": [
+              { "@type": "CreativeWork", "name": "全智评", "url": "https://estelledc.github.io/work/quanzhiping/" },
+              { "@type": "CreativeWork", "name": "BJ-Pal", "url": "https://estelledc.github.io/work/bj-pal/" },
+              { "@type": "CreativeWork", "name": "UIKit Lifecycle Lab", "url": "https://estelledc.github.io/UIKitLifecycleDemo/" },
+              { "@type": "CreativeWork", "name": "HardwareDecoder", "url": "https://estelledc.github.io/HardwareDecoder/" }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://estelledc.github.io/#website",
+            "url": "https://estelledc.github.io/",
+            "name": "Jason Xun",
+            "inLanguage": ["zh-CN", "en"],
+            "author": { "@id": "https://estelledc.github.io/#person" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header" aria-label="主导航">
-      <a class="brand" href="/" aria-label="回到首页">
-        <span class="brand-mark">X</span>
-        <span>Jason Xun · Product Systems Builder</span>
-      </a>
-      <nav class="site-nav">
-        <a href="#work">项目</a>
-        <a href="#thyself">Thyself</a>
-        <a href="#heritage">触见千年</a>
-        <a href="#practicemate">PracticeMate</a>
-        <a href="#satellites">学习站</a>
-        <a href="/about/">About</a>
-      </nav>
+      <div class="site-header__inner">
+        <a class="brand" href="/" aria-label="Jason Xun 首页">
+          <span class="brand-mark" aria-hidden="true">X</span>
+          <span class="brand-copy">
+            <strong>Jason Xun</strong>
+            <small>Product Systems Builder</small>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="桌面导航">
+          <a href="/work/">Work</a>
+          <a href="/about/">About</a>
+          <a href="/resume/">Resume</a>
+          <a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a>
+        </nav>
+        <details class="nav-menu">
+          <summary>Menu</summary>
+          <nav class="mobile-nav" aria-label="移动导航">
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            <a href="/resume/">Resume</a>
+            <a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a>
+          </nav>
+        </details>
+      </div>
     </header>
 
-    <main>
-      <section class="tile hero-tile tile-light" id="top" aria-labelledby="hero-title">
-        <div class="tile-copy">
-          <p class="eyebrow">Product Systems Builder</p>
-          <h1 id="hero-title">把模糊想法做成可运行的产品系统<br />再把过程沉淀为可复用的知识外溢</h1>
-          <p class="lead">
-            一个产品算不算做完，我看的不是功能上线，而是真实用户把事走完：老师批完一个班的实操视频，读者读完今天给他的 8 篇，医学生跟着端侧教练练完一套 CPR。做完之后，过程本身也得变成别人能用的东西。
+    <main id="main">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Jason Xun · Product Systems Builder</p>
+          <p class="hero-scope" lang="en">AI workflows · Web products · iOS · Systems learning</p>
+          <h1 class="display-title" id="hero-title">把模糊需求，做成能被验证的产品系统。</h1>
+          <p class="lede">
+            我负责把需求收敛、界面、数据流、AI 编排、部署和验收接成一条能运行、能解释、能继续迭代的产品链路。
           </p>
-          <div class="actions" aria-label="主要操作">
-            <a class="pill" href="#work">看代表项目</a>
-            <a class="pill pill-secondary" href="/about/">About</a>
-          </div>
-        </div>
-
-      </section>
-
-      <section class="tile tile-dark feature-tile" id="work" aria-labelledby="work-title">
-        <div class="tile-copy">
-          <p class="eyebrow">Selected Work</p>
-          <h2 id="work-title">全智评</h2>
-          <p class="lead">
-            一位实验课老师晚上十点还在逐条点开学生上传的滴定操作视频，手动记录每个步骤是否规范——全智评把这个夜班拆成流水线：教师建项目发课堂码，学生上传实操视频，后台自动切关键帧、对照评分点给出评价明细，老师只需复核与签发。
+          <p class="english-summary" lang="en">
+            I turn ambiguous product work into inspectable systems, from product framing and interface decisions to AI orchestration, delivery, and verification.
           </p>
           <div class="actions">
-            <a class="pill" href="https://www.quanzhiping.com/" target="_blank" rel="noopener">打开线上产品</a>
+            <a class="button" href="/work/">查看代表案例</a>
+            <a class="button-secondary" href="/resume/">Web résumé</a>
           </div>
         </div>
+        <aside class="hero-proof" aria-label="可核验的代表证据">
+          <p class="hero-proof__label">Comparable evidence / 04</p>
+          <div class="hero-proof__list">
+            <a href="/work/quanzhiping/" data-evidence-key="quanzhiping-shipped">
+              <span>Outcome · Web product</span><strong>Shipped</strong><small>全智评已有公开产品表面</small>
+            </a>
+            <a href="https://github.com/estelledc/bj-pal/blob/main/docs/eval-100-results.md" data-evidence-key="bj-pal-final-pass">
+              <span>Observed · Agent eval</span><strong>47 / 100</strong><small>限定场景评测，不外推真实用户效果</small>
+            </a>
+            <a href="https://github.com/estelledc/UIKitLifecycleDemo/blob/main/UIKitLifecycleDemoUITests/UIKitLifecycleDemoUITests.swift" data-evidence-key="uikit-ui-tests">
+              <span>Verified · iOS lab</span><strong>2 / 2</strong><small>iPhone Simulator UI Test</small>
+            </a>
+            <a href="https://github.com/estelledc/HardwareDecoder/tree/main/Tests/HardwareDecoderCoreTests" data-evidence-key="hardwaredecoder-xctest">
+              <span>Verified · Swift system</span><strong>12 / 12</strong><small>XCTest + 真实 H.264 fixture</small>
+            </a>
+          </div>
+          <p class="jx-verification-line">Evidence reviewed · 2026-07-11 · 数字直达案例、测试源码或评测记录</p>
+        </aside>
+      </section>
 
-        <div class="feature-spec" aria-label="全智评能力摘要">
-          <div>
-            <span>Frontend</span>
-            <strong>React · Vite · TypeScript · Ant Design</strong>
-          </div>
-          <div>
-            <span>Backend</span>
-            <strong>FastAPI · PostgreSQL · Redis · Celery</strong>
-          </div>
-          <div>
-            <span>AI Pipeline</span>
-            <strong>ASR · Key Frames · Qwen Vision</strong>
-          </div>
-          <div>
-            <span>Deploy</span>
-            <strong>OSS · Docker Compose · nginx</strong>
-          </div>
+      <section class="shell" aria-label="工作原则">
+        <div class="proof-strip">
+          <article>
+            <span>01 / Systems</span>
+            <strong>Systems over isolated screens.</strong>
+          </article>
+          <article>
+            <span>02 / Evidence</span>
+            <strong>Evidence over adjectives.</strong>
+          </article>
+          <article>
+            <span>03 / Explainability</span>
+            <strong>Explainability over hidden magic.</strong>
+          </article>
         </div>
       </section>
 
-      <section class="tile tile-light thyself-tile" id="thyself" aria-labelledby="thyself-title">
-        <div class="thyself-copy">
-          <p class="eyebrow">Daily Curation System</p>
-          <h2 id="thyself-title">Thyself</h2>
-          <p class="lead">
-            推荐系统默认给你一条停不下来的 feed，刷两小时合上手机想不起读过什么。Thyself 每天只推 8 篇长文，每篇都附一句"为什么是给你的"——基于你过去读过、标过、写过的东西生成，而不是基于你停留了几秒。读完留下的笔记会写回你的阅读偏好，第二天的 8 篇据此重新挑。
-          </p>
-          <div class="actions">
-            <a class="pill" href="https://www.thyself.cc/" target="_blank" rel="noopener">打开线上产品</a>
-          </div>
-        </div>
-
-        <figure class="product-shot web-showcase">
-          <img
-            src="/assets/media/thyself-landing.png"
-            alt="Thyself 官网 Salvage your taste and curiosity 首屏截图"
-            width="1440"
-            height="1100"
-            loading="lazy"
-          />
-          <figcaption>Thyself 上线站点 · Daily content panel</figcaption>
-        </figure>
-      </section>
-
-      <section class="tile tile-dark-3 heritage-tile" id="heritage" aria-labelledby="heritage-title">
-        <div class="video-showcase">
-          <iframe
-            src="https://player.bilibili.com/player.html?bvid=BV1Pv1EB3EQT&page=1&high_quality=1&danmaku=0&autoplay=0"
-            title="触见千年 Vision Pro 项目演示视频"
-            loading="lazy"
-            allow="fullscreen; picture-in-picture"
-          ></iframe>
-        </div>
-        <div class="heritage-copy">
-          <p class="eyebrow">展柜外看 · visionOS 里敲</p>
-          <h2 id="heritage-title">触见千年</h2>
-          <p class="lead">
-            评价标准只有一条：访客能不能亲手把那一锤敲在曾侯乙编钟上、听见自己敲出的音。博物馆里编钟隔着玻璃，禁止触碰也无从听见；visionOS 沉浸空间把整套编钟搬进来，手势切换槌具、调出乐谱，落槌即响，2400 年前的声音由访客自己打出。
-          </p>
-          <div class="actions">
-            <a class="pill" href="https://www.bilibili.com/video/BV1Pv1EB3EQT" target="_blank" rel="noopener">在 B 站观看</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="tile tile-dark-2 feature-tile" id="practicemate" aria-labelledby="practicemate-title">
-        <div class="tile-copy">
-          <p class="eyebrow">On-Device AI Coach</p>
-          <h2 id="practicemate-title">PracticeMate</h2>
-          <p class="lead">
-            医学生独自练 CPR 时没人实时纠正——PracticeMate 把「录像等批改」变成端侧教练陪练：视频不离开手机，换一份评价标准 YAML 即换整套检测逻辑与教练话术，低置信时教练说「我不太确定」而不是硬给结论。
-          </p>
-          <div class="actions">
-            <a class="pill" href="https://estelledc.github.io/practicemate/" target="_blank" rel="noopener">查看产品文档</a>
-            <a class="pill pill-secondary" href="https://github.com/estelledc/practicemate" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-
-        <div class="feature-spec" aria-label="PracticeMate 能力摘要">
+      <section class="section shell" aria-labelledby="selected-work">
+        <div class="section-heading">
           <div>
-            <span>Architecture</span>
-            <strong>Rubric Runtime · 换 YAML 换整套评价</strong>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="selected-work">四件作品，四种可比经验。</h2>
           </div>
-          <div>
-            <span>AI</span>
-            <strong>MNN 端侧推理 · 双人格 Coach + Examiner</strong>
-          </div>
-          <div>
-            <span>Frontend</span>
-            <strong>Swift · Vision · SwiftUI</strong>
-          </div>
-          <div>
-            <span>Philosophy</span>
-            <strong>诚实设计 · 低置信不隐藏</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="tile tile-parchment satellites-tile" id="satellites" aria-labelledby="satellites-title">
-        <div class="tile-copy">
-          <p class="eyebrow">Learning Satellites</p>
-          <h2 id="satellites-title">学一个记一个，公开 9 个学习站。</h2>
-          <p class="lead">
-            从硬核工程基础到 AI 工程实操，每个 satellite 都是一段从零到能跑的过程证据。
+          <p>
+            从已上线工作流、Agent 决策，到 iOS 生命周期与视频解码。每一项都把本人角色、证据来源和未验证边界放在同一屏。
           </p>
         </div>
-        <div class="satellites-groups">
-          <div class="satellites-group">
-            <h3 class="satellites-group__label">产品 & 教程</h3>
-            <ul class="satellites-list">
-              <li><a href="https://estelledc.github.io/practicemate/">PracticeMate</a><span>端侧 AI 教练 · 产品文档站</span></li>
-              <li><a href="https://estelledc.github.io/zero-to-ai/">Zero to AI</a><span>AI 编程零基础教程 · 3 条路径 24 页</span></li>
-              <li><a href="https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/">LangChain 教程</a><span>4 周 14 篇 learning-by-doing</span></li>
-            </ul>
-          </div>
-          <div class="satellites-group">
-            <h3 class="satellites-group__label">研究 & 阅读</h3>
-            <ul class="satellites-list">
-              <li><a href="https://estelledc.github.io/rhino-bird-2026/">犀牛鸟 2026</a><span>8 赛道 41 项目精读研究</span></li>
-              <li><a href="https://estelledc.github.io/study/">study</a><span>项目研究 + 论文研究</span></li>
-              <li><a href="https://estelledc.github.io/embodied-ai-reading-station/">具身智能导读</a><span>13 篇 paper 期刊风</span></li>
-              <li><a href="https://estelledc.github.io/after-reading/">73 本书架</a><span>完整阅读人格</span></li>
-            </ul>
-          </div>
-          <div class="satellites-group">
-            <h3 class="satellites-group__label">课程笔记</h3>
-            <ul class="satellites-list">
-              <li><a href="https://estelledc.github.io/hust-eic-os-review/">操作系统</a><span>5 章 + 9 个 lab</span></li>
-              <li><a href="https://estelledc.github.io/hust-eic-microwave-from-scratch/">微波技术</a><span>8 章从零讲起网页书</span></li>
-            </ul>
-          </div>
+        <div class="project-grid">
+          <a class="project-card project-card--wide" href="/work/quanzhiping/">
+            <div class="project-card__visual project-card__visual--qzp">
+              <img
+                src="/assets/media/quanzhiping-login.png"
+                alt="全智评教师端、学生端与管理端登录界面"
+                width="1440"
+                height="1100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-card__body">
+              <div>
+                <span class="status-chip" data-status="shipped">Shipped · 已上线</span>
+                <h3>全智评</h3>
+                <p>把视频证据、评分模板、AI 辅助反馈和教师复核接进同一条实操评价工作流。</p>
+              </div>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="project-card project-card--narrow" href="/work/bj-pal/">
+            <div class="project-card__visual project-card__visual--bjpal" aria-hidden="true">
+              <span class="project-card__monogram">BJ<em>·</em>Pal</span>
+            </div>
+            <div class="project-card__body">
+              <div>
+                <span class="status-chip" data-status="prototype">Prototype</span>
+                <h3>BJ-Pal</h3>
+                <p>把一句模糊的周末需求，变成有偏好解释、风险回退和群体收敛的活动方案。</p>
+              </div>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="project-card project-card--wide" href="https://estelledc.github.io/UIKitLifecycleDemo/">
+            <div class="project-card__visual project-card__visual--uikit" aria-hidden="true">
+              <div class="uikit-trace">
+                <span>01 · viewDidLoad</span><span>02 · delegate</span><span>03 · target-action</span><span>04 · closure</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div>
+                <span class="status-chip" data-status="maintained">Verified lab</span>
+                <h3>UIKit Lifecycle Lab</h3>
+                <p>让一次 Save 操作点亮 UIKit 隐式调用、delegate、target-action 与 closure 轨迹。</p>
+              </div>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="project-card project-card--narrow" href="https://estelledc.github.io/HardwareDecoder/">
+            <div class="project-card__visual project-card__visual--decoder" aria-hidden="true">
+              <div class="decoder-trace"><span>$ probe fixture.h264</span><strong>852×480 · IDR 20</strong><span>$ decode --frames 6 ✓</span></div>
+            </div>
+            <div class="project-card__body">
+              <div>
+                <span class="status-chip" data-status="maintained">Verified lab</span>
+                <h3>HardwareDecoder</h3>
+                <p>从 Annex-B NAL 到 VideoToolbox 帧输出，用真实 fixture 和 XCTest 让解码管线可复核。</p>
+              </div>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </div>
+        <div class="actions">
+          <a class="text-action" href="/work/">浏览全部案例与公开站点</a>
         </div>
       </section>
 
+      <section class="section shell" aria-labelledby="working-method">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">How I work</p>
+            <h2 id="working-method">把“会做”变成可复用的系统能力。</h2>
+          </div>
+          <p>每个项目都会留下三个层次的工件：产品界面、工程约束和能解释取舍的知识。</p>
+        </div>
+        <div class="method-grid">
+          <article class="method-card">
+            <h3>先定义完成</h3>
+            <p>把“上线一个功能”改写成用户能走完的任务，再确定信息、状态与失败路径。</p>
+          </article>
+          <article class="method-card">
+            <h3>让 AI 可检查</h3>
+            <p>模型输出必须落进模板、证据、置信度或人工复核节点，而不是成为黑箱结论。</p>
+          </article>
+          <article class="method-card">
+            <h3>让经验外溢</h3>
+            <p>测试、案例、教程和根因复盘共同构成下一次可以直接复用的工程基建。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" aria-labelledby="public-artifacts">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Public artifacts</p>
+            <h2 id="public-artifacts">产品之外，还有一组持续更新的公开工件。</h2>
+          </div>
+          <p>保留原有线上作品入口；数量只代表覆盖面，案例页会进一步说明质量边界。</p>
+        </div>
+        <ul class="satellite-list">
+          <li>
+            <a href="/work/study/">Study</a>
+            <p>把开源项目与经典论文放进同一张工程判断力学习地图。</p>
+            <span>Case</span>
+          </li>
+          <li>
+            <a href="/work/zero-to-ai/">Zero to AI</a>
+            <p>面向编程零基础用户的 Claude Code 与 Codex 独立实战路线。</p>
+            <span>Case</span>
+          </li>
+          <li>
+            <a href="/work/embodied-ai/">Embodied AI</a>
+            <p>从日常类比出发的具身智能教程、论文地图和学习工具。</p>
+            <span>Case</span>
+          </li>
+          <li>
+            <a href="/work/xiaochai/">小柴</a>
+            <p>完全本地运行的每日中文纸条、涂鸦与 Widget 原型。</p>
+            <span>Private source</span>
+          </li>
+          <li>
+            <a href="https://www.thyself.cc/" target="_blank" rel="noopener">Thyself ↗</a>
+            <p>以每日有限策展替代无限信息流的思考与创作产品。</p>
+            <span>Live product</span>
+          </li>
+          <li>
+            <a href="https://www.bilibili.com/video/BV1Pv1EB3EQT" target="_blank" rel="noopener">触见千年 ↗</a>
+            <p>在 visionOS 沉浸空间里亲手敲响曾侯乙编钟。</p>
+            <span>Vision Pro</span>
+          </li>
+          <li>
+            <a href="https://estelledc.github.io/practicemate/" target="_blank" rel="noopener">PracticeMate ↗</a>
+            <p>端侧 AI 教练产品文档；当前明确处于 Phase 0 原型验证。</p>
+            <span>Prototype docs</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="shell closing-panel" aria-labelledby="closing-title">
+        <div>
+          <p class="eyebrow">Next conversation</p>
+          <h2 id="closing-title">如果你在找能把产品、AI 与工程接起来的人，从案例开始。</h2>
+        </div>
+        <div class="actions">
+          <a class="button" href="/work/">查看案例</a>
+          <a class="button-secondary" href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </section>
     </main>
 
-    <footer class="jx-footer">
-      <div class="jx-footer__colophon">
-        <strong>Jason Notebook</strong>
-        <span lang="en">VOL · MMXXVI</span>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <strong>Jason Xun</strong>
+          <p>Product systems, AI orchestration, full-stack delivery.</p>
+        </div>
+        <nav aria-label="页脚导航">
+          <a href="/work/">Work</a>
+          <a href="/about/">About</a>
+          <a href="/resume/">Resume</a>
+          <a href="https://github.com/estelledc" target="_blank" rel="noopener">GitHub ↗</a>
+        </nav>
+        <time datetime="2026-07-11">Updated · 2026.07.11</time>
       </div>
-      <nav class="jx-footer__index">
-        <a href="/about/">about</a>
-        <a href="https://github.com/estelledc">github</a>
-        <a href="https://www.quanzhiping.com/" target="_blank" rel="noopener">quanzhiping</a>
-        <a href="https://www.thyself.cc/" target="_blank" rel="noopener">thyself</a>
-      </nav>
-      <time class="jx-footer__stamp" datetime="2026-06-22" lang="en">2026·06·22</time>
     </footer>
   </body>
 </html>

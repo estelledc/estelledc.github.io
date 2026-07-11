@@ -1,0 +1,18 @@
+[
+  { "name": "Hub", "url": "https://estelledc.github.io/", "publishOrder": 3 },
+  { "name": "BJ-Pal", "url": "https://estelledc.github.io/bj-pal/", "publishOrder": 1 },
+  { "name": "PracticeMate", "url": "https://estelledc.github.io/practicemate/", "publishOrder": 1 },
+  { "name": "Rhino Bird 2026", "url": "https://estelledc.github.io/rhino-bird-2026/", "publishOrder": 1 },
+  { "name": "Zero to AI", "url": "https://estelledc.github.io/zero-to-ai/", "publishOrder": 1 },
+  { "name": "Study", "url": "https://estelledc.github.io/study/", "publishOrder": 1 },
+  { "name": "Embodied AI Reading Station", "url": "https://estelledc.github.io/embodied-ai-reading-station/", "publishOrder": 1 },
+  { "name": "After Reading", "url": "https://estelledc.github.io/after-reading/", "publishOrder": 1 },
+  { "name": "IoT", "url": "https://estelledc.github.io/iot/", "publishOrder": 1 },
+  { "name": "OS Review", "url": "https://estelledc.github.io/hust-eic-os-review/", "publishOrder": 1 },
+  { "name": "Microwave", "url": "https://estelledc.github.io/hust-eic-microwave-from-scratch/", "publishOrder": 1 },
+  { "name": "LangChain Tutorial", "url": "https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/", "publishOrder": 1 },
+  { "name": "HardwareDecoder", "url": "https://estelledc.github.io/HardwareDecoder/", "publishOrder": 2 },
+  { "name": "UIKit Lifecycle Lab", "url": "https://estelledc.github.io/UIKitLifecycleDemo/", "publishOrder": 2 },
+  { "name": "my_mips", "url": "https://estelledc.github.io/my_mips/", "publishOrder": 2 },
+  { "name": "Doubao Theme", "url": "https://estelledc.github.io/doubao-auto-system-theme/", "publishOrder": 2 }
+]
