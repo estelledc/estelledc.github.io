@@ -167,6 +167,25 @@ const workIndex = readFileSync(join(root, "work/index.html"), "utf8");
 const homePage = readFileSync(join(root, "index.html"), "utf8");
 const evidenceManifest = JSON.parse(readFileSync(join(root, "data/evidence.json"), "utf8"));
 const publicSites = JSON.parse(readFileSync(join(root, "data/public-sites.json"), "utf8"));
+const siteCss = readFileSync(join(root, "assets/site.css"), "utf8");
+const designSystemVersion = readFileSync(join(root, "assets/jx/VERSION"), "utf8").trim();
+
+if (designSystemVersion !== "2.2.0") fail("assets/jx/VERSION", "expected Jason DS 2.2.0");
+for (const [pattern, label] of [
+  [/\btransition\s*:\s*all\b/i, "transition: all"],
+  [/\bscale\(\s*0(?:\.0+)?\s*\)/i, "scale(0)"],
+  [/(?<![-\w])ease-in(?![-\w])/i, "UI ease-in"],
+  [/transition-duration:\s*0\.01ms/i, "global zero-duration motion reset"],
+]) {
+  if (pattern.test(siteCss)) fail("assets/site.css", `motion contract forbids ${label}`);
+}
+for (const marker of [
+  "@media (hover: hover) and (pointer: fine)",
+  "@media (prefers-reduced-motion: reduce)",
+  "@media (prefers-reduced-transparency: reduce)",
+]) {
+  if (!siteCss.includes(marker)) fail("assets/site.css", `motion contract missing ${marker}`);
+}
 for (const marker of [
   '"@type": "ProfilePage"',
   '"mainEntity": { "@id": "https://estelledc.github.io/#person" }',
