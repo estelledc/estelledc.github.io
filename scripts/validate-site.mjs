@@ -203,12 +203,16 @@ const publicEntryContracts = [
   ["https://github.com/estelledc/doubao-auto-system-theme", "豆包主题适配器"],
   ["https://estelledc.github.io/rhino-bird-2026/", "犀牛鸟 2026"],
   ["https://estelledc.github.io/langchain-langgraph-langsmith-tutorial/", "LangChain 教程"],
+  ["https://estelledc.github.io/algorithm-coach/", "Algorithm Coach"],
   ["https://estelledc.github.io/iot/", "IoT 全栈学习站"],
   ["https://estelledc.github.io/after-reading/", "After Reading"],
   ["https://estelledc.github.io/hust-eic-os-review/", "操作系统"],
   ["https://estelledc.github.io/hust-eic-microwave-from-scratch/", "微波技术"],
   ["https://estelledc.github.io/HardwareDecoder/", "HardwareDecoder"],
   ["https://estelledc.github.io/UIKitLifecycleDemo/", "UIKit Lifecycle Lab"],
+  ["https://estelledc.github.io/SwiftMessengerLab/", "Swift Messenger Lab"],
+  ["https://estelledc.github.io/SwiftConcurrencyLab/", "Swift Concurrency Lab"],
+  ["https://estelledc.github.io/RunLoopLab/", "RunLoop Lab"],
   ["https://estelledc.github.io/my_mips/", "my_mips"],
 ];
 
@@ -239,8 +243,8 @@ for (const [key, evidence] of Object.entries(evidenceManifest)) {
 if (new Set(publicSites.map((site) => site.url)).size !== publicSites.length) {
   fail("data/public-sites.json", "public site URLs must be unique");
 }
-if (publicSites.length !== 16 || !publicSites.every((site) => [1, 2, 3].includes(site.publishOrder))) {
-  fail("data/public-sites.json", "expected 16 frontends assigned to publication waves 1–3");
+if (publicSites.length !== 20 || !publicSites.every((site) => [1, 2, 3].includes(site.publishOrder))) {
+  fail("data/public-sites.json", "expected 20 frontends assigned to publication waves 1–3");
 }
 
 for (const [fragment, label] of [["product-cases", "Product systems"], ["learning-cases", "Learning systems"], ["engineering-labs", "Engineering labs"]]) {
