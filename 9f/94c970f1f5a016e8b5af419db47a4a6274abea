@@ -1,0 +1,25 @@
+assets/site.css
+  s_11fd7f38d66298::t_fef4dbe5f00bc3 1119-1123,1126-1144,1146-1168,1825-1828,1872-1878
+sitemap.xml
+  s_11fd7f38d66298::t_e4793de7dcc90e 10
+work/xiaochai/index.html
+  s_11fd7f38d66298::t_a4b7d1ca380ee6 7,14,20,26,32,34,37,54,59-60,70-82,96-99,119-120,129,137
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9f94c970f1f5a016e8b5af419db47a4a6274abea",
+  "prompts": {},
+  "sessions": {
+    "s_11fd7f38d66298": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_11fd7f38d66298",
+        "model": "unknown"
+      },
+      "human_author": "zhouxun <zhouxun.13@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
