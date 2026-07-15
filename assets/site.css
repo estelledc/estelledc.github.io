@@ -1115,12 +1115,15 @@ a {
 }
 
 .case-media--xiaochai {
+  --xiaochai-media-background: #dcd9d0;
+  --xiaochai-media-caption: #4e514d;
+  --xiaochai-media-rule: rgba(23, 25, 23, 0.28);
   display: grid;
   min-height: 0;
   padding: clamp(38px, 6vw, 76px) var(--site-gutter);
   place-items: center;
   gap: 24px;
-  background: #dcd9d0;
+  background: var(--xiaochai-media-background);
 }
 
 .xiaochai-showcase {
@@ -1138,9 +1141,14 @@ a {
   gap: 16px;
 }
 
-.case-media--xiaochai .xiaochai-shot img {
+.xiaochai-shot picture {
   display: block;
   width: min(100%, 360px);
+}
+
+.case-media--xiaochai .xiaochai-shot img {
+  display: block;
+  width: 100%;
   height: auto;
   max-height: none;
   aspect-ratio: 1206 / 2622;
@@ -1153,7 +1161,7 @@ a {
 
 .xiaochai-shot span,
 .case-media--xiaochai figcaption {
-  color: #4e514d;
+  color: var(--xiaochai-media-caption);
   font-family: var(--jx-font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -1165,7 +1173,15 @@ a {
 .case-media--xiaochai figcaption {
   width: min(100%, 920px);
   padding-top: 22px;
-  border-top: 1px solid rgba(23, 25, 23, 0.28);
+  border-top: 1px solid var(--xiaochai-media-rule);
+}
+
+@media (prefers-color-scheme: dark) {
+  .case-media--xiaochai {
+    --xiaochai-media-background: #171a19;
+    --xiaochai-media-caption: #b1b5b0;
+    --xiaochai-media-rule: rgba(235, 236, 239, 0.25);
+  }
 }
 
 .case-content {
@@ -1872,8 +1888,11 @@ a {
     padding-block: 34px;
   }
 
-  .case-media--xiaochai .xiaochai-shot img {
+  .xiaochai-shot picture {
     width: min(100%, 330px);
+  }
+
+  .case-media--xiaochai .xiaochai-shot img {
     border-width: 6px;
     border-radius: 38px;
   }
