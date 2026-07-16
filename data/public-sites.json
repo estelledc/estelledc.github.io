@@ -18,5 +18,6 @@
   { "name": "RunLoop Lab", "url": "https://estelledc.github.io/RunLoopLab/", "publishOrder": 2 },
   { "name": "Algorithm Coach", "url": "https://estelledc.github.io/algorithm-coach/", "publishOrder": 2 },
   { "name": "my_mips", "url": "https://estelledc.github.io/my_mips/", "publishOrder": 2 },
-  { "name": "Doubao Theme", "url": "https://estelledc.github.io/doubao-auto-system-theme/", "publishOrder": 2 }
+  { "name": "Doubao Theme", "url": "https://estelledc.github.io/doubao-auto-system-theme/", "publishOrder": 2 },
+  { "name": "Xunji Otter", "url": "https://estelledc.github.io/xunji-otter/", "publishOrder": 2 }
 ]
