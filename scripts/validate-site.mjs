@@ -215,6 +215,8 @@ const publicEntryContracts = [
   ["https://estelledc.github.io/RunLoopLab/", "RunLoop Lab"],
   ["https://estelledc.github.io/my_mips/", "my_mips"],
   ["https://estelledc.github.io/xunji-otter/", "循迹獭 Xunji Otter"],
+  ["https://estelledc.github.io/xunchao-ray/", "巡潮鳐 Xunchao Ray"],
+  ["https://estelledc.github.io/xunfeng-kite/", "巡风鸢 Xunfeng Kite"],
 ];
 
 for (const [url, label] of publicEntryContracts) {
@@ -244,8 +246,8 @@ for (const [key, evidence] of Object.entries(evidenceManifest)) {
 if (new Set(publicSites.map((site) => site.url)).size !== publicSites.length) {
   fail("data/public-sites.json", "public site URLs must be unique");
 }
-if (publicSites.length !== 21 || !publicSites.every((site) => [1, 2, 3].includes(site.publishOrder))) {
-  fail("data/public-sites.json", "expected 21 frontends assigned to publication waves 1–3");
+if (publicSites.length !== 23 || !publicSites.every((site) => [1, 2, 3].includes(site.publishOrder))) {
+  fail("data/public-sites.json", "expected 23 frontends assigned to publication waves 1–3");
 }
 
 for (const [fragment, label] of [["product-cases", "Product systems"], ["learning-cases", "Learning systems"], ["engineering-labs", "Engineering labs"]]) {
